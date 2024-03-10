@@ -7,7 +7,7 @@ module.exports = {
         xsm: "360px",
       },
       colors: {
-        primary: "#0643d6",
+        primary: "#4869E8",
       },
       backgroundImage: {
         "hero-pattern":
