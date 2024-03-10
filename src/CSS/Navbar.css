@@ -1,0 +1,61 @@
+.navdropdown >li{
+    @apply flex  p-4 border-b border-gray-400 mt-2 justify-between font-medium bg-white w-full;
+    
+}
+.navdropdown >li>img{
+    @apply rotate-90;
+
+}
+..navdropdown{
+    @apply w-screen bg-white;
+
+}
+.navdropdown{
+    animation-name: navbarAnim;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.Similara{
+    @apply text-primary text-[15px] mb-[6px] block;
+}
+.centerdiscription{
+    @apply flex flex-col;
+
+}
+/* .move-down-step1 {
+    animation: moveDownStep1 1s linear forwards;
+  }
+  
+  .move-down-step2 {
+    animation: moveDownStep2 1s linear forwards;
+  } */
+/* Add this to your stylesheet or in a style tag within your component */
+@keyframes moveDownStep1 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  
+  @keyframes moveDownStep2 {
+    0% {
+      transform: translateY(100%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  
+  

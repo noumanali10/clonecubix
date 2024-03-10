@@ -19,4 +19,12 @@
 .container{
   @apply flex justify-center items-center;
 }
-
+.Similara{
+    @apply text-primary text-[15px] mb-[6px] block font-semibold;
+}
+.Similarcenter span{
+  @apply text-[14px] font-medium;
+}
+.centerdiscription{
+  @apply mt-3
+}

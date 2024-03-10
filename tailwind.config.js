@@ -12,7 +12,7 @@ module.exports = {
       backgroundImage: {
         "hero-pattern":
           "url('https://www.cubix.co/storage/app/media/home/banner-slider-img/modernizing-mobile-platforms-opt-updated-img.webp')",
-      },
+      }
     },
   },
   plugins: [],
