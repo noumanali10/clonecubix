@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React, { useState } from "react";
 import ServicesDropDown from "./ServicesDropDown";
 import "../CSS/Navbar.css";
@@ -18,6 +19,15 @@ export default function Navbar() {
     setToggle((prevToggle) => !prevToggle);
   };
 
+=======
+import React,{useState} from 'react'
+
+export default function Navbar() {
+    const [toggleBar,setToggleBar]=useState(false)
+    const handleClick =(e)=>{
+    setToggleBar(!toggleBar);
+    }
+>>>>>>> Stashed changes
   return (
     <>
       <div className="flex border absolute  border-red-600 justify-around xsm:justify-between xsm:px-8 items-center navbar h-[10vh] w-screen  bg-white mt-0 top-0 ">
@@ -30,6 +40,7 @@ export default function Navbar() {
           </div>
         </div>
         <div className="navright flex">
+<<<<<<< Updated upstream
           <nav className="flex  min-w-24 grow">
             <ul className="flex w-full justify-between items-center ">
               <li>
@@ -55,6 +66,15 @@ export default function Navbar() {
               </li>
             </ul>
           </nav>
+=======
+            <nav className='flex border border-green-900 min-w-24 grow'>
+                <ul className='flex w-full justify-between items-center border border-red-900'>
+                   
+                    <li><span className='border   bg-primary text-white h-11 w-11 text-sm  rounded-full flex items-center justify-center'><i class="fa-solid fa-phone"></i></span></li>
+                    <li onClick={handleClick()} className={toggleBar===true?'inline-block': 'hidden'}><span className='border container text-2xl'><i class="fa-solid fa-bars-staggered"></i></span></li>
+                </ul>
+            </nav>
+>>>>>>> Stashed changes
         </div>
       </div>
       <div
