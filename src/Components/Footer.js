@@ -5,7 +5,7 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <section className="footer flex  justify-around items-center flex-col lg:flex-row border-t-2 border-[#808291] h-40">
+      <section className="footer flex  justify-around items-center flex-col lg:flex-row   h-40">
         <div className="footerlogo">
           <img
             className="w-[97px] lg:w-[80px]"
@@ -13,7 +13,7 @@ export default function Footer() {
             alt="logo"
           />
         </div>
-        <div className="footermain self-center text-center w-5/6 text-[#808291]">
+        <div className="footermain self-center text-center xms:w-5/6 sm:w-auto text-[#808291]">
           <span className="text-xs">&copy; </span>
           <span className="">2024 Cubix. All Rights Reserved.</span>
           <a href="http://#">Terms of Use.</a>
