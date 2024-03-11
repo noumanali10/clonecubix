@@ -14,8 +14,8 @@ function App() {
       <Navbar />
       <Hero />
       {/* Uncomment the components below as needed. */}
-      {/* <CTA /> */}
-      {/* <Footer /> */}
+      {/* <CTA />
+      <Footer /> */}
       {/* <ServicesDropDown /> */}
     </>
   );

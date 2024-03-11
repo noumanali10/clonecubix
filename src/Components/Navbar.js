@@ -1,19 +1,36 @@
 import React, { useState } from "react";
 import ServicesDropDown from "./ServicesDropDown";
+import SolutionsDropDown from "./solutionsDropDown";
 import "../CSS/Navbar.css";
 import icons from "../Images/icons";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(true);
-  const [toggle2, setToggle2] = useState(false);
+  const [toggleServices, setToggleServices] = useState(false);
+  const [toggleSolutions, setToggleSolutions] = useState(false);
 
-  const handleClick2 = () => {
-    setToggle2(!toggle2);
+  const handleClick2 = (section) => {
+    if(section==='services'){
+        setToggleSolutions(false);
+        setToggleServices(!toggleServices);
+    }
+    else if('solution' && toggleSolutions===false){
+        setToggleServices(false);
+        setToggleSolutions(true);
+    }
+    else{
+        setToggleServices(false);
+        setToggleSolutions(false);
+    }
+   
   };
 
   const handleClick = () => {
     setToggle(!toggle);
+    setToggleServices(false);
+    setToggleSolutions(false);
   };
+  
 
   return (
     <>
@@ -30,8 +47,9 @@ export default function Navbar() {
           <nav className="flex min-w-24 grow">
             <ul className="flex w-full justify-between items-center">
               <li>
-                <span className="border bg-primary text-white h-11 w-11 text-sm rounded-full flex items-center justify-center">
-                  <i className="fa-solid fa-phone"></i>
+                <span className="border dialNumber  bg-primary text-white h-11 w-11 text-sm rounded-full flex items-center justify-center">
+                  <i onClick={()=>{var phoneNumber = '+923034849777'; 
+    window.location.href = 'tel:' + phoneNumber;}} className="fa-solid fa-phone"></i>
                 </span>
               </li>
               <li onClick={handleClick} className={toggle ? "inline-block" : "hidden"}>
@@ -50,18 +68,36 @@ export default function Navbar() {
       </div>
       <div
         className={
-          toggle ? "hidden move-down-step1 navdropdown" : "move-down-step2 navdropdown h-auto bg-white w-full absolute top-[4.65rem]"
+          toggle ? "hidden move-down-step1 navdropdown" : " move-down-step2 h-screen navdropdown  bg-white w-full absolute top-[4.65rem]"
         }
       >
-        <ul>
+        <ul className="h-full">
           <li>
             <span>Services</span>
-            <img onClick={handleClick2} src={icons.gt} alt="expand" />
-            <div className={toggle2 ? "h-auto" : "hidden"}>
+            <img onClick={() => handleClick2('services')} src={icons.gt} alt="expand" />
+           
+          </li>
+          <div className={toggleServices ? "h-auto" : "hidden"}>
               <ServicesDropDown />
             </div>
-          </li>
-          {/* Repeat for other navigation items as needed */}
+          <li>
+          <span>Solutions</span>
+          <img onClick={() => handleClick2('solution')} src={icons.gt} alt="" />
+        </li>
+        <div className={toggleSolutions ? "h-auto" : "hidden"}>
+            <SolutionsDropDown/>
+        </div>
+        <li>Work</li>
+        <li>
+          <span>About</span>
+          <img src={icons.gt} alt="" />
+        </li>
+        <li>
+          <span>Resources</span>
+          <img src={icons.gt} alt="" />
+        </li>
+        <li>Contact</li>
+
         </ul>
       </div>
     </>

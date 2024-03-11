@@ -1,12 +1,19 @@
-.navdropdown >li{
+
+.navdropdown >ul>li{
     @apply flex  p-4 border-b border-gray-400 mt-2 justify-between font-medium bg-white w-full;
     
 }
-.navdropdown >li>img{
+
+.coomen{
+  @apply flex flex-col ;
+}
+.navdropdown> ul>li>img{
     @apply rotate-90;
 
 }
-..navdropdown{
+
+
+.navdropdown{
     @apply w-screen bg-white;
 
 }
@@ -19,7 +26,11 @@
     animation-direction: alternate;
 }
 .Similara{
-    @apply text-primary text-[15px] mb-[6px] block;
+    @apply text-primary text-[15px] mb-[6px] inline ;
+    @apply hover:border-b border-primary;
+}
+.servicespan{
+  @apply font-[14px] py-2;
 }
 .centerdiscription{
     @apply flex flex-col;

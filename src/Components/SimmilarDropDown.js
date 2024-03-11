@@ -1,75 +1,96 @@
 import React from 'react'
 
+
+
 export default function SimmilarDropDown(props) {
   return (
     <div className='h-auto flex flex-col ml-6 '>
       <div className="Similartop flex flex-col ml-3  ">
-        <span className='text-xl mt-4'>Our services</span>
-        <span className='text-sm py-4'>Leveraging cutting-edge technologies to build industry-leading digital products. </span>
+        <span className='text-xl mt-4'>{props.title}</span>
+        <span className='text-sm py-4'>{props.titledes} </span>
       </div>
       <div className="Similarcenter flex flex-col">
-      <p className='font-semibold inline-block text-xl py-3'>Servies</p>
-        <div className="centerdiv1">
-            <div className="centerdiscription">
-                <a className='Similara' href="http://#">Mobile Application</a>
+      <p className='font-semibold inline-block text-xl py-3'>{props.titlemain}</p>
+        <div className="centerdiv1 similar ">
+            <div className={`centerdiscription ${props.tech1des} `}>
+                <a className='Similara' href="http://#">{props.tech1}</a>
                 <span>
-                    <a href="http://#">IOS,</a>
-                    <a href="http://#">Andriod</a>
-                    <span>and Wearable Apps</span>
+                    <a href="http://#">{props.tech1a1}</a>
+                    <a href="http://#">{props.tech1a2}</a>
+                    {/* <a href="http://#">Andriod</a> */}
+                    <span>{props.tech1des}</span>
                 </span>
             </div>
             <div className="centerdiscription">
-            <a className='Similara' href="http://#">Game Development</a>
-            <span>2D,3D and Isometric Games</span>
+            <a className='Similara' href="http://#">{props.tech2}</a>
+            <span>{props.tech2des}</span>
             </div>
             <div className="centerdiscription">
-            <a className='Similara' href="http://#">Blockchain Development</a>
+            <a className='Similara' href="http://#">{props.tech3}</a>
+            {/* <a className='Similara' href="http://#">Blockchain Development</a> */}
             <span>
-              Blockchain DApp Development
+              {props.tech3des}
+              {/* Blockchain DApp Development */}
             </span>
             </div>
             <div className="centerdiscription">
-            <a className='Similara' href="http://#">Augmented Reality</a>
+            <a className='Similara' href="http://#">{props.tech4}</a>
+            {/* <a className='Similara' href="http://#">Augmented Reality</a> */}
             <span>
-              Modern AR apps
+              {props.tech4des}
+              {/* Modern AR apps */}
             </span>
             </div>
             <div className="centerdiscription">
-            <a className='Similara' href="http://#">Artificial intelligence</a>
+            <a className='Similara' href="http://#">{props.tech5}</a>
+            {/* <a className='Similara' href="http://#">Artificial intelligence</a> */}
             <span>
-              AI and Machine Learning
+              {props.tech5des}
+              {/* AI and Machine Learning */}
             </span>
             </div>
             <div className="centerdiscription">
-            <a className='Similara' href="http://#">Web Development</a>
+            <a className='Similara' href="http://#">{props.tech6}</a>
+            {/* <a className='Similara' href="http://#">Web Development</a> */}
             <span>
-              Robust web development
+              {props.tech6des}
+              {/* Robust web development */}
             </span>
             </div>
             <div className="centerdiscription">
-              <a className='Similara' href="http://#">NFT Game Development</a>
+              <a className='Similara' href="http://#">{props.tech7}</a>
+              {/* <a className='Similara' href="http://#">NFT Game Development</a> */}
               <span>
-                NFT Marketplace and NFT Solutions
+                {props.tech7des}
+                {/* NFT Marketplace and NFT Solutions */}
               </span>
             </div>
             <div className="centerdiscription">
-            <a className='Similara' href="http://#">Big Data</a>
+            <a className='Similara' href="http://#">{props.tech8}</a>
+            {/* <a className='Similara' href="http://#">Big Data</a> */}
             <span>
-              Apps integrated with Big Data
+              {props.tech8des}
+              {/* Apps integrated with Big Data */}
             </span>
             </div>
             <div className="centerdiscription">
-            <a className='Similara' href="http://#">Visionos Development</a>
-            <span>VisionPro App and Game Development</span>
+            <a className='Similara' href="http://#">{props.tech9}</a>
+            {/* <a className='Similara' href="http://#">Visionos Development</a> */}
+            <span>{props.tech9des}</span>
+            {/* <span>VisionPro App and Game Development</span> */}
             </div>
             <div className="centerdiscription">
-            <a className='Similara' href="http://#">MVP Development</a>
-            <span>MVP for Startups</span>
+            <a className='Similara' href="http://#">{props.tech10}</a>
+            {/* <a className='Similara' href="http://#">MVP Development</a> */}
+            <span>{props.tech10des}</span>
+            {/* <span>MVP for Startups</span> */}
             </div>
             <div className="centerdiscription">
-            <a className='Similara' href="http://#">SharePoint</a>
+            <a className='Similara' href="http://#">{props.tech11}</a>
+            {/* <a className='Similara' href="http://#">SharePoint</a> */}
             <span>
-              Microsoft SharePoint Development Services
+              {props.tech11des}
+              {/* Microsoft SharePoint Development Services */}
             </span>
             </div>
         </div>

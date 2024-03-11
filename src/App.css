@@ -4,6 +4,7 @@
 
   font-family: 'Averta',sans-serif;
 }
+
 .navimg{
   @apply w-[37px];
   @apply sm:w-[67px];
@@ -20,11 +21,14 @@
   @apply flex justify-center items-center;
 }
 .Similara{
-    @apply text-primary text-[15px] mb-[6px] block font-semibold;
+    @apply text-primary text-[15px] mb-[6px] font-semibold;
 }
 .Similarcenter span{
   @apply text-[14px] font-medium;
 }
 .centerdiscription{
   @apply mt-3
+}
+.similar{
+  @apply inline;
 }
