@@ -12,15 +12,15 @@ export default function SimmilarDropDown(props) {
       <div className="Similarcenter flex flex-col">
       <p className='font-semibold inline-block text-xl py-3'>{props.titlemain}</p>
         <div className="centerdiv1 similar ">
-            <div className={`centerdiscription ${props.tech1des} `}>
+            {/* <div className={`centerdiscription ${props.tech1des} `}>
                 <a className='Similara' href="http://#">{props.tech1}</a>
                 <span>
                     <a href="http://#">{props.tech1a1}</a>
                     <a href="http://#">{props.tech1a2}</a>
-                    {/* <a href="http://#">Andriod</a> */}
+                  
                     <span>{props.tech1des}</span>
                 </span>
-            </div>
+            </div> */}
             <div className="centerdiscription">
             <a className='Similara' href="http://#">{props.tech2}</a>
             <span>{props.tech2des}</span>

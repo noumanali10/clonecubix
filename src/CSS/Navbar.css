@@ -25,9 +25,12 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+.aboutDownSpan{
+  @apply flex flex-col pt-2;
+  
+}
 .Similara{
     @apply text-primary text-[15px] mb-[6px] inline ;
-    @apply hover:border-b border-primary;
 }
 .servicespan{
   @apply font-[14px] py-2;
@@ -35,6 +38,9 @@
 .centerdiscription{
     @apply flex flex-col;
 
+}
+.centerdiscription span{
+  @apply font-[14px] py-2;
 }
 /* .move-down-step1 {
     animation: moveDownStep1 1s linear forwards;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ServicesDropDown from "./ServicesDropDown";
 import SolutionsDropDown from "./solutionsDropDown";
+import AboutDropDown from "./aboutDropDown";
 import "../CSS/Navbar.css";
 import icons from "../Images/icons";
 
@@ -8,19 +9,29 @@ export default function Navbar() {
   const [toggle, setToggle] = useState(true);
   const [toggleServices, setToggleServices] = useState(false);
   const [toggleSolutions, setToggleSolutions] = useState(false);
+  const [toggleAbout, setToggleAbout] = useState(false);
 
   const handleClick2 = (section) => {
     if(section==='services'){
         setToggleSolutions(false);
+        setToggleAbout(false);
         setToggleServices(!toggleServices);
     }
-    else if('solution' && toggleSolutions===false){
+    else if(section==='solution' ){
         setToggleServices(false);
-        setToggleSolutions(true);
+        setToggleAbout(false);
+        setToggleSolutions(!toggleSolutions);
+    }
+    else if(section==='about'){
+        setToggleServices(false); 
+        setToggleSolutions(false);
+        setToggleAbout(!toggleAbout);
+       
     }
     else{
         setToggleServices(false);
         setToggleSolutions(false);
+        setToggleAbout(false);
     }
    
   };
@@ -29,6 +40,7 @@ export default function Navbar() {
     setToggle(!toggle);
     setToggleServices(false);
     setToggleSolutions(false);
+    setToggleAbout(false);
   };
   
 
@@ -90,8 +102,11 @@ export default function Navbar() {
         <li>Work</li>
         <li>
           <span>About</span>
-          <img src={icons.gt} alt="" />
+          <img onClick={() => handleClick2('about')} src={icons.gt} alt="" />
         </li>
+        <div className={toggleAbout ? "h-auto" : "hidden"}>
+            <AboutDropDown/>
+        </div>
         <li>
           <span>Resources</span>
           <img src={icons.gt} alt="" />
