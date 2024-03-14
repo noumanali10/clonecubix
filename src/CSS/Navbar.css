@@ -3,6 +3,20 @@
     @apply flex  p-4 border-b border-gray-400 mt-2 justify-between font-medium bg-white w-full;
     
 }
+.sticky-menu {
+  @apply h-screen z-40;
+  position: fixed;
+  overflow-y: scroll; /* Fix the position relative to the viewport */
+  top: 1rem; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Span the full width of the viewport */ /* Ensure it sits above other content */
+  background-color: #fff; /* Optional: Change the background color */
+}
+
+.no-scroll {
+  overflow: hidden;
+   height:100vh; 
+}
 
 .coomen{
   @apply flex flex-col ;
@@ -25,22 +39,28 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+.about{
+  @apply flex h-[25vh] items-center gap-7 flex-wrap w-10/12;
+}
+.aboutitem{
+  @apply  flex flex-col text-[20px] text-black font-semibold;
+}
 .aboutDownSpan{
   @apply flex flex-col pt-2;
   
 }
 .Similara{
-    @apply text-primary text-[15px] mb-[6px] inline ;
+    @apply text-primary text-[15px]  inline hover:underline ;
 }
 .servicespan{
-  @apply font-[14px] py-2;
+  @apply font-[14px] ;
 }
 .centerdiscription{
     @apply flex flex-col;
 
 }
 .centerdiscription span{
-  @apply font-[14px] py-2;
+  @apply font-[14px] py-1;
 }
 /* .move-down-step1 {
     animation: moveDownStep1 1s linear forwards;

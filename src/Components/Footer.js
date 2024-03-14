@@ -5,7 +5,7 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <section className="footer flex  justify-around items-center flex-col lg:flex-row   h-40">
+      <section className=" relative footer flex  justify-around items-center flex-col lg:flex-row   h-40">
         <div className="footerlogo">
           <img
             className="w-[97px] lg:w-[80px]"

@@ -11,7 +11,7 @@ import rightimg4 from "../Images/rightimg4.webp";
 export default function hero() {
   return (
     <>
-      <div className=" flex justify-center items-centerheromain bg-hero-pattern bg-cover bg-center h-[73vh] sm:h-[90vh]  text-white">
+      <div className=" relative flex justify-center items-centerheromain bg-hero-pattern bg-cover bg-center h-[73vh] sm:h-[90vh]  text-white">
         <div className="h-full border border-yellow-500 flex justify-center items-center flex-col w-11/12 ">
           <div className=" mt-12 h-5/6 flex justify-around flex-col border border-red-700 sm:h-3/4">
           <div>

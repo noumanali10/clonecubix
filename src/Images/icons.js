@@ -1,62 +1,219 @@
-import gt from './svgexport-9.svg'
+import gt from "./svgexport-9.svg";
 
-const localDB=[
-    services[
-        title='Our Services',
-        titledes='Leveraging cutting-edge technologies to build industry-leading digial products',
-        minitile='Services',
-        item1={
-            name:'Mobile Development',
-            des:'IOS,Andriod and Wearable Apps'
-        },
-        item2={
-            name:'Game Development',
-            des:'2D,3D and Isometric Games'
-        },
-        item3={
-            name:'Augmented Reality',
-            des:'Modern AR apps'
-        },
-        item8={
-            name:'Visions Development',
-            des:'VisionPro App and Game Development'
-        },
-        item7={
-            name:'Big Data',
-            des:'Apps integrated with Big Data'
-        },
-        item9={
-            name:'MVP Development',
-            des:'MVP for Startups'
-        },
-        item10={
-            name:'SharePoint',
-            des:'Microsoft SharePoint Development Services'
-        },
-        item6={
-            name:'NFT Games Development',
-            des:'NFT Marketplace and NFT Solutions'
-        },
-        item5={
-            name:'Web Development',
-            des:'Robust web development'
-        },
-        item4={
-            name:'Artificil Intelligence',
-            des:'AI and Machine Learning'
-        }
-
-
-
-
+const localDB = [
+  {
+    services: [
+      {
+        title: "Our Services",
+        titledes:
+          "Leveraging cutting-edge technologies to build industry-leading digital products",
+        minititle: "Services",
+        minititle2: "How we Work",
+        items: [
+          {
+            name: "Mobile Development",
+            des: "iOS, Android, and Wearable Apps",
+          },
+          {
+            name: "Game Development",
+            des: "2D, 3D, and Isometric Games",
+          },
+          {
+            name: "Augmented Reality",
+            des: "Modern AR apps",
+          },
+          {
+            name: "Visions Development",
+            des: "VisionPro App and Game Development",
+          },
+          {
+            name: "Big Data",
+            des: "Apps integrated with Big Data",
+          },
+          {
+            name: "MVP Development",
+            des: "MVP for Startups",
+          },
+          {
+            name: "SharePoint",
+            des: "Microsoft SharePoint Development Services",
+          },
+          {
+            name: "NFT Games Development",
+            des: "NFT Marketplace and NFT Solutions",
+          },
+          {
+            name: "Web Development",
+            des: "Robust web development",
+          },
+          {
+            name: "Artificial Intelligence",
+            des: "AI and Machine Learning",
+          },
+        ],
+        items2: [
+          {
+            name: "Discovery",
+            des: "Exploring project requirments",
+          },
+          {
+            name: "Design",
+            des: "Intutive and engaging designs",
+          },
+          {
+            name: "Development",
+            des: "Agile development proccesses",
+          },
+          {
+            name: "Testing",
+            des: "Incremental testing and QA",
+          },
+          {
+            name: "Deployment",
+            des: "Full-function product delivery",
+          },
+        ],
+      },
     ],
+    solutions: [
+      {
+        title: "Our solutions",
+        titledes:
+          "Customized digital solutions to help clients build their competitive edge.",
+        minititle: "Products",
+        minititle2: "Core services",
+        items: [
+          {
+            name: "Cubix Happyforce",
+            des: "HR Solution",
+          },
+          {
+            name: "Cubix Shop",
+            des: "Marketplace Solution",
+          },
+          {
+            name: "On-Demand delivery",
+            des: "On Demand Delivery solution",
+          },
+          {
+            name: "Cubix Chain",
+            des: "Blockchain Solution",
+          },
+          {
+            name: "Cubix Insight Machine",
+            des: "Machine Solution",
+          },
+          {
+            name: "Cubix Hero",
+            des: "Powerfull RPG Solution",
+          },
+          {
+            name: "Messenger",
+            des: "Real-time messaging solution",
+          },
+          {
+            name: "Chat Bot",
+            des: "Smart Chatbot solution",
+          },
+          {
+            name: "Social Platform",
+            des: "Social-App building Platform",
+          },
+          {
+            name: "Events Management",
+            des: "Digital event management",
+          },
+        ],
+        items2: [
+          {
+            name: "Mobile Development",
+            des: "iOS, Android, and Wearable Apps",
+          },
+          {
+            name: "Game Development",
+            des: "2D, 3D, and Isometric Games",
+          },
+          {
+            name: "Augmented Reality",
+            des: "Modern AR apps",
+          },
+          {
+            name: "Visions Development",
+            des: "VisionPro App and Game Development",
+          },
+          {
+            name: "Big Data",
+            des: "Apps integrated with Big Data",
+          },
+        ],
+      },
+    ],
+    about: [
+      {
+        title: "About",
+        titledes:
+          "A full-cycle software and mobile app development company with a world-class team of innovators.",
+        minititle: "Explore",
+        items: [
+          {
+            name: "Process ",
+            des: "Our Agile Process",
+          },
+          {
+            name: "Clients",
+            des: "Our Global Clientele",
+          },
+          {
+            name: "Testimonials",
+            des: "What our clients have to say",
+          },
+          {
+            name: "Careers",
+            des: "Build your careers with us",
+          },
+          {
+            name: "University",
+            des: "Learn and Grow",
+          },
+          {
+            name: "Manifesto",
+            des: "Our Business Model",
+          },
+        ],
+      },
+    ],
+    resources: [
+      {
+        title: "Resources",
+        titledes:
+          "Explore data-rich insights from out content experts and tech geeks, bringing interesting updates from across the global.",
+        minititle: "Explore",
+        items: [
+          {
+            name: "Blog ",
+            des: "Stuff that Matters",
+          },
+          {
+            name: "Press release",
+            des: "From our media desk",
+          },
+          {
+            name: "News & Updates",
+            des: "Stay Informed about us",
+          },
+          {
+            name: "Events",
+            des: "Global tech events",
+          },
+          
+        ],
+      },
+    ],
+  },
 ];
 
-
-
 const icons = {
- gt
-
+  gt,
 };
 
-export default icons;
+export { icons, localDB };

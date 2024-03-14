@@ -1,52 +1,66 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ServicesDropDown from "./ServicesDropDown";
 import SolutionsDropDown from "./solutionsDropDown";
 import AboutDropDown from "./aboutDropDown";
 import "../CSS/Navbar.css";
-import icons from "../Images/icons";
+import { icons } from "../Images/icons";
+import ResourcesDropDown from "./resourcesDropDown";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(true);
   const [toggleServices, setToggleServices] = useState(false);
   const [toggleSolutions, setToggleSolutions] = useState(false);
   const [toggleAbout, setToggleAbout] = useState(false);
+  const [toggleResources, setToggleResources] = useState(false);
+ 
+  useEffect(() => {
+    if (toggle) {
+        document.body.classList.remove('no-scroll');
+    } else {
+        document.body.classList.add('no-scroll');
+    }
+    // Clean-up function
+    return () => {
+        document.body.classList.remove('no-scroll');
+    };
+}, [toggle]);
 
   const handleClick2 = (section) => {
-    if(section==='services'){
-        setToggleSolutions(false);
-        setToggleAbout(false);
-        setToggleServices(!toggleServices);
+    if (section === "services") {
+      setToggleSolutions(false);
+      setToggleAbout(false);
+      setToggleResources(false);
+      setToggleServices(!toggleServices);
+    } else if (section === "solution") {
+      setToggleServices(false);
+      setToggleAbout(false);
+      setToggleResources(false);
+      setToggleSolutions(!toggleSolutions);
+    } else if (section === "about") {
+      setToggleServices(false);
+      setToggleSolutions(false);
+      setToggleResources(false);
+      setToggleAbout(!toggleAbout);
+    }else if (section === "resources") {
+      setToggleServices(false);
+      setToggleSolutions(false);
+      setToggleAbout(false);
+      setToggleResources(!toggleResources);
+    } else {
+      setToggleServices(false);
+      setToggleSolutions(false);
+      setToggleAbout(false);
+      setToggleResources(false);
     }
-    else if(section==='solution' ){
-        setToggleServices(false);
-        setToggleAbout(false);
-        setToggleSolutions(!toggleSolutions);
-    }
-    else if(section==='about'){
-        setToggleServices(false); 
-        setToggleSolutions(false);
-        setToggleAbout(!toggleAbout);
-       
-    }
-    else{
-        setToggleServices(false);
-        setToggleSolutions(false);
-        setToggleAbout(false);
-    }
-   
   };
 
   const handleClick = () => {
     setToggle(!toggle);
-    setToggleServices(false);
-    setToggleSolutions(false);
-    setToggleAbout(false);
   };
-  
 
   return (
     <>
-      <div className="flex border absolute border-red-600 justify-around xsm:justify-between xsm:px-8 items-center navbar h-[10vh] w-screen bg-white mt-0 top-0">
+      <div className="flex border fixed z-50  border-red-600 justify-around xsm:justify-between xsm:px-8 items-center navbar h-[10vh] w-screen bg-white mt-0 top-0">
         <div className="navleft">
           <div className="logo w-[97px]">
             <img
@@ -60,16 +74,27 @@ export default function Navbar() {
             <ul className="flex w-full justify-between items-center">
               <li>
                 <span className="border dialNumber  bg-primary text-white h-11 w-11 text-sm rounded-full flex items-center justify-center">
-                  <i onClick={()=>{var phoneNumber = '+923034849777'; 
-    window.location.href = 'tel:' + phoneNumber;}} className="fa-solid fa-phone"></i>
+                  <i
+                    onClick={() => {
+                      var phoneNumber = "+923034849777";
+                      window.location.href = "tel:" + phoneNumber;
+                    }}
+                    className="fa-solid fa-phone"
+                  ></i>
                 </span>
               </li>
-              <li onClick={handleClick} className={toggle ? "inline-block" : "hidden"}>
+              <li
+                onClick={handleClick}
+                className={toggle ? "inline-block" : "hidden"}
+              >
                 <span className="border container text-2xl h-4">
                   <i className="fa-solid fa-bars-staggered"></i>
                 </span>
               </li>
-              <li onClick={handleClick} className={!toggle ? "inline-block" : "hidden"}>
+              <li
+                onClick={handleClick}
+                className={!toggle ? "inline-block" : "hidden"}
+              >
                 <span className="border container text-2xl h-4">
                   <i className="fa-solid fa-xmark"></i>
                 </span>
@@ -77,44 +102,65 @@ export default function Navbar() {
             </ul>
           </nav>
         </div>
+       
       </div>
-      <div
+     <div id="blank" className={toggle?"":"sticky-menu"}>
+     <div
         className={
-          toggle ? "hidden move-down-step1 navdropdown" : " move-down-step2 h-screen navdropdown  bg-white w-full absolute top-[4.65rem]"
+          toggle
+            ? "hidden move-down-step1 navdropdown"
+            : " move-down-step2 h-auto z-50  navdropdown absolute bg-white w-full   top-[4rem]"
         }
       >
-        <ul className="h-full">
+        <ul className="h-auto ">
           <li>
             <span>Services</span>
-            <img onClick={() => handleClick2('services')} src={icons.gt} alt="expand" />
-           
+            <img
+              onClick={() => handleClick2("services")}
+              src={icons.gt}
+              alt="expand"
+            />
           </li>
           <div className={toggleServices ? "h-auto" : "hidden"}>
-              <ServicesDropDown />
-            </div>
+            <ServicesDropDown />
+          </div>
           <li>
-          <span>Solutions</span>
-          <img onClick={() => handleClick2('solution')} src={icons.gt} alt="" />
-        </li>
-        <div className={toggleSolutions ? "h-auto" : "hidden"}>
-            <SolutionsDropDown/>
-        </div>
-        <li>Work</li>
-        <li>
-          <span>About</span>
-          <img onClick={() => handleClick2('about')} src={icons.gt} alt="" />
-        </li>
-        <div className={toggleAbout ? "h-auto" : "hidden"}>
-            <AboutDropDown/>
-        </div>
-        <li>
-          <span>Resources</span>
-          <img src={icons.gt} alt="" />
-        </li>
-        <li>Contact</li>
-
+            <span>Solutions</span>
+            <img
+              onClick={() => handleClick2("solution")}
+              src={icons.gt}
+              alt=""
+            />
+          </li>
+          <div className={toggleSolutions ? "h-auto" : "hidden"}>
+            <SolutionsDropDown />
+          </div>
+          <li>Work</li>
+          <li>
+            <span>About</span>
+            <img onClick={() => handleClick2("about")} src={icons.gt} alt="" />
+          </li>
+          <div className={toggleAbout ? "h-auto" : "hidden"}>
+            <AboutDropDown />
+          </div>
+          <li>
+            <span>Resources</span>
+            <img    onClick={() => handleClick2("resources")}
+              src={icons.gt}
+              alt="expand" />
+          </li>
+          <div className={toggleResources ? "h-auto" : "hidden"}>
+            < ResourcesDropDown/>
+          </div>
+          <li>Contact</li>
         </ul>
       </div>
+    {/* </div> */}
+    
+     </div>
+    
     </>
+
   );
 }
+
