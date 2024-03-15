@@ -1,0 +1,19 @@
+.heroimg{
+width:37.7px;
+}
+.herorightimg1{
+    @apply sm:w-[55px] sm:h-[50px]
+}
+.herorightimg2{
+    @apply sm:w-[60px] sm:h-[47px]
+}
+.herorightimg3{
+    @apply sm:w-[50px] sm:h-auto
+}
+.herorightimg4{
+    @apply sm:w-[50px] sm:h-[50px]
+}
+.heroimg2{
+    width:37.7px;
+    @apply sm:w-[68.4px] ;
+}

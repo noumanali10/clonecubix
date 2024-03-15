@@ -1,70 +1,48 @@
 import React from "react";
-import leftimg1 from "../Images/leftimg1.webp";
-import leftimg2 from "../Images/leftimg2.webp";
-import leftimg3 from "../Images/leftimg3.webp";
-import leftimg4 from "../Images/leftimg4.webp";
-import rightimg1 from "../Images/rightimg1.webp";
-import rightimg2 from "../Images/rightimg2.webp";
-import rightimg3 from "../Images/rightimg3.webp";
-import rightimg4 from "../Images/rightimg4.webp";
+import "../CSS/Hero.css"
+import { imgs } from "../Images/icons";
 
-export default function hero() {
+export default function Hero() {
   return (
     <>
-      <div className=" relative flex justify-center items-centerheromain bg-hero-pattern bg-cover bg-center h-[73vh] sm:h-[90vh]  text-white">
-        <div className="h-full border border-yellow-500 flex justify-center items-center flex-col w-11/12 ">
-          <div className=" mt-12 h-5/6 flex justify-around flex-col border border-red-700 sm:h-3/4">
-          <div>
-            <h1 className="font-semibold text-3xl lg:text-red-500   ">
-              Modernizing Mobile Platforms
-            </h1>
-          </div>
-          <div>
-            <h4 className="text-[18px] text-[#ffffffa8]  text-center">
-              Custom mobile apps. User experience & design. Engagement &
-              intelligence. Native & cross-platform
-            </h4>
-          </div>
-          <button className="herobtn sm:w-32 rounded border-primary inline-block w-36 self-center bg-primary px-4 py-2">LET'S TALK</button>
-          <div className="logos w-full bg-[#000000b0] rounded border sm:self-center border-white flex justify-around flex-col items-center sm:h-1/2 sm:w-full slef-center ">
-            <div className="logostop flex flex-col border h-5/6 border-green-500 w-10/12 sm:h-1/3">
-              <span className="self-center p-4 sm:p-1 sm:text-xm">Trusted by</span>
-              <ul className="flex  justify-around sm:w-2/3 sm:self-center items-center border border-red-700">
-                <li>
-                  <img className="navimg" src={leftimg1} alt="" />
-                </li>
-                <li>
-                  <img className="navimg" src={leftimg2} alt="" />
-                </li>
-                <li>
-                  <img className="navimg pb-3" src={leftimg3} alt="" />
-                </li>
-                <li>
-                  <img className="navimg" src={leftimg4} alt="" />
-                </li>
-              </ul>
+      <section className="Hero h-4/5 relative top[4rem]  ">
+        <div className="bg-hero-pattern bg-cover bg-center h-[95vh] sm:items-center sm:justify-center  text-white justify-around flex flex-col   items-center">
+        <div className="bgimg  h-[70%] sm:h-auto ml-3  flex items-center ">
+          <div className="Herotext flex flex-col  h-5/6 sm:h-3/5 justify-evenly items-center mt-8" >
+            <span className="herotile text-white font-bold text-3xl mt-6 sm:self-start">Modernizing Mobile Platforms</span>
+            <span className="text-lg text-center font-normal text-white opacity-90 sm:mt-8">
+              Custom mobile apps. User experiences & design. Engagement &
+              Intelligence.Native & cross-platforms
+            </span>
+            <div className="flex items-center justify-center mt-6">
+            <button className=" p-4 herobtn self-center font-bold text-sm border rounded-sm bg-primary w-32 h-auto border-primary inline-block">LETS'S TALK</button>
             </div>
-            <div className="logodown flex justify-center items-center flex-col w-11/12">
-              <span className="py-4 sm:p-1 sm:text-sm">Awards</span>
-              <ul className="flex border border-orange-600 justify-around w-11/12 mb-3 ">
-                <li>
-                  <img className="navimg" src={rightimg1} alt="" />
-                </li>
-                <li>
-                  <img className="navimg sm:pt-2" src={rightimg2} alt="" />
-                </li>
-                <li>
-                  <img className="navimg" src={rightimg3} alt="" />
-                </li>
-                <li>
-                  <img className="navimg" src={rightimg4} alt="" />
-                </li>
-              </ul>
-            </div>
-          </div>
           </div>
         </div>
-      </div>
+        <div className="flex justify-center items-center w-full h-1/3 ">
+        <div className="bg-[#000000b0] w-[96%] h-4/5 rounded-md flex flex-col justify-around">
+          <div className="trustedby flex flex-col items-center h-2/5 justify-around">
+            <span className="font-medium text-xl">Trusted by</span>
+            <div className="heroleftimg flex w-full justify-evenly sm:w-3/5 items-center ">
+              <img src={imgs.leftimg1} alt="" className="heroleftimg1 sm:h-3 heroimg2" />
+              <img src={imgs.leftimg2} alt="" className="heroleftimg2 sm:h-[17.09px] heroimg2" />
+              <img src={imgs.leftimg3} alt="" className="heroleftimg sm:pb-2 heroimg2" />
+              <img src={imgs.leftimg4} alt="" className="heroleftimg4 heroimg2" />
+            </div>
+          </div>
+          <div className="awards flex flex-col items-center h-3/5 justify-around  ">
+            <span className="font-medium text-xl">Awards</span>
+            <div className="herorightimgs flex w-full justify-evenly sm:w-3/5 ">
+              <img src={imgs.rightimg1} alt="" className="herorightimg1 heroimg" />
+              <img src={imgs.rightimg2} alt="" className="herorightimg2 heroimg" />
+              <img src={imgs.rightimg3} alt="" className="herorightimg3 heroimg" />
+              <img src={imgs.rightimg4} alt="" className="herorightimg4 heroimg" />
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </section>
     </>
   );
 }

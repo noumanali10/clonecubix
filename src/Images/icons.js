@@ -1,4 +1,12 @@
 import gt from "./svgexport-9.svg";
+import leftimg1 from "./leftimg1.webp"
+import leftimg2 from "./leftimg2.webp"
+import leftimg3 from "./leftimg3.webp"
+import leftimg4 from "./leftimg4.webp"
+import rightimg1 from "./rightimg1.webp"
+import rightimg2 from "./rightimg2.webp"
+import rightimg3 from "./rightimg3.webp"
+import rightimg4 from "./rightimg4.webp"
 
 const localDB = [
   {
@@ -215,5 +223,15 @@ const localDB = [
 const icons = {
   gt,
 };
+const imgs = {
+  leftimg1,
+  leftimg2,
+  leftimg3,
+  leftimg4,
+  rightimg1,
+  rightimg2,
+  rightimg3,
+  rightimg4,
+};
 
-export { icons, localDB };
+export { icons, localDB,imgs };
