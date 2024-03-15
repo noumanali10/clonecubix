@@ -6,15 +6,15 @@ export default function Hero() {
   return (
     <>
       <section className="Hero h-4/5 relative top[4rem]  ">
-        <div className="bg-hero-pattern bg-cover bg-center h-[95vh] sm:items-center sm:justify-center  text-white justify-around flex flex-col   items-center">
+        <div className="bg-hero-pattern bg-cover bg-center h-[75vh] sm:items-center sm:justify-center  text-white justify-around flex flex-col   items-center">
         <div className="bgimg  h-[70%] sm:h-auto ml-3  flex items-center ">
           <div className="Herotext flex flex-col  h-5/6 sm:h-3/5 justify-evenly items-center mt-8" >
-            <span className="herotile text-white font-bold text-3xl mt-6 sm:self-start">Modernizing Mobile Platforms</span>
-            <span className="text-lg text-center font-normal text-white opacity-90 sm:mt-8">
+            <span className="herotile text-white font-bold text-3xl mt-12 sm:self-start">Modernizing Mobile Platforms</span>
+            <span className="text-lg text-center font-normal text-white opacity-90 inline-block w-[96%] sm:mt-8">
               Custom mobile apps. User experiences & design. Engagement &
               Intelligence.Native & cross-platforms
             </span>
-            <div className="flex items-center justify-center mt-6">
+            <div className="flex items-center justify-center ">
             <button className=" p-4 herobtn self-center font-bold text-sm border rounded-sm bg-primary w-32 h-auto border-primary inline-block">LETS'S TALK</button>
             </div>
           </div>
