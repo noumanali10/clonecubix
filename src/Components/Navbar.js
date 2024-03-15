@@ -87,7 +87,7 @@ export default function Navbar() {
                 onClick={handleClick}
                 className={toggle ? "inline-block" : "hidden"}
               >
-                <span className="border container text-2xl h-4">
+                <span className=" container text-2xl h-4">
                   <i className="fa-solid fa-bars-staggered"></i>
                 </span>
               </li>
@@ -95,7 +95,7 @@ export default function Navbar() {
                 onClick={handleClick}
                 className={!toggle ? "inline-block" : "hidden"}
               >
-                <span className="border container text-2xl h-4">
+                <span className=" container text-2xl h-4">
                   <i className="fa-solid fa-xmark"></i>
                 </span>
               </li>
