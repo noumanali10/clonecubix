@@ -32,3 +32,15 @@
 .similar{
   @apply inline;
 }
+.logosin{
+  @apply flex flex-col justify-center items-center;
+  @apply font-bold text-xl;
+  @apply h-auto w-1/2
+}
+.logosin span{
+  @apply text-wrap w-3/5 text-center gap-4;
+}
+
+.svg{
+  @apply h-16 w-16;
+}
