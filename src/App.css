@@ -33,12 +33,12 @@
   @apply inline;
 }
 .logosin{
-  @apply flex flex-col justify-center items-center;
+  @apply flex flex-col justify-center gap-4 items-center;
   @apply font-bold text-xl;
-  @apply h-auto w-1/2
+  @apply h-[250px] w-[150px];
 }
 .logosin span{
-  @apply text-wrap w-3/5 text-center gap-4;
+  @apply text-wrap w-11/12 text-center gap-4;
 }
 
 .svg{

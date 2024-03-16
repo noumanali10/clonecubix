@@ -3,8 +3,8 @@ import React from "react";
 export default function section2() {
   return (
     <>
-      <section className="herolower flex justify-center items-center bg-gradient-to-r from-[#0bccee] to-[#ac1de1] h-screen text-white">
-        <div className=" flex flex-col justify-around h-3/4">
+      <section className="  herolower flex justify-center items-center bg-gradient-to-r from-[#0bccee] to-[#ac1de1] h-auto text-white">
+        <div className=" mt-20 flex flex-col justify-around h-3/4 ">
           <div className="herolowertext Flex justify-around items-center h-full">
             <div className="toptext text-xs font-normal text-[rgba(255,255,255,.5)] flex justify-center gap-5 w-full ">
               <span>DESIGN.</span>
