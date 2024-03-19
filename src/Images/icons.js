@@ -7,6 +7,10 @@ import rightimg1 from "./rightimg1.webp"
 import rightimg2 from "./rightimg2.webp"
 import rightimg3 from "./rightimg3.webp"
 import rightimg4 from "./rightimg4.webp"
+import app from '../Images/app development.png'
+import game from './game-development.png'
+import web from './web-programming.png'
+import bloackchain from './blockchain.png'
 
 const localDB = [
   {
@@ -232,6 +236,10 @@ const imgs = {
   rightimg2,
   rightimg3,
   rightimg4,
+  app,
+  game,
+  web,
+  bloackchain,
 };
 
 export { icons, localDB,imgs };

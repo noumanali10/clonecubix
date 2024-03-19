@@ -36,11 +36,24 @@
   @apply flex flex-col justify-center gap-4 items-center;
   @apply font-bold text-xl;
   @apply h-[250px] w-[150px];
+  @apply active:bg-white active:text-[#000] ;
 }
 .logosin span{
-  @apply text-wrap w-11/12 text-center gap-4;
+  @apply text-wrap w-11/12 text-center gap-4 active:text-[#000];
+  fill: green;
 }
-
+.icon-shape {
+  fill: white; 
+  transition: fill 0.3s ease; 
+}
+.icon:hover .icon-shape {
+  fill: black; 
+}
 .svg{
   @apply h-16 w-16;
+  filter: brightness(0) invert(1);
+}
+.svg:active{
+  fill:black;
+  filter: brightness(100) invert(0);
 }

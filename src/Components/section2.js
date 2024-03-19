@@ -1,10 +1,11 @@
 import React from "react";
+import { imgs } from "../Images/icons";
 
 export default function section2() {
   return (
     <>
       <section className="  herolower flex justify-center items-center bg-gradient-to-r from-[#0bccee] to-[#ac1de1] h-auto text-white">
-        <div className=" mt-20 flex flex-col justify-around h-3/4 ">
+        <div className=" flex flex-col justify-around h-3/4 ">
           <div className="herolowertext Flex justify-around items-center h-full">
             <div className="toptext text-xs font-normal text-[rgba(255,255,255,.5)] flex justify-center gap-5 w-full ">
               <span>DESIGN.</span>
@@ -18,9 +19,12 @@ export default function section2() {
               </span>
             </div>
           </div>
-          <div className="logos flex flex-wrap justify-around h-full ">
+          <div
+            className="logos flex flex-wrap justify-around h-full
+           "
+          >
             <div className="logosin">
-              <div className="">
+              {/* <div className="">
                 <svg
                   version="1.1"
                   id="elvn-1"
@@ -74,11 +78,12 @@ export default function section2() {
                     strokeWidth="3.0403px"
                   ></path>
                 </svg>
-              </div>
+              </div> */}
+              <img className="svg" src={imgs.app} alt="" />
               <span>App Development</span>
             </div>
             <div className="logosin ">
-              <svg
+              {/* <svg
                 version="1.1"
                 id="elvn-1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -218,11 +223,12 @@ export default function section2() {
                     strokeWidth="3.04px"
                   ></path>
                 </g>
-              </svg>
+              </svg> */}
+              <img className="svg" src={imgs.game} alt="" />
               <span>Game Development</span>
             </div>
             <div className="logosin">
-              <svg
+              {/* <svg
                 version="1.1"
                 id="elvn-1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -314,11 +320,12 @@ export default function section2() {
                   style={{ strokeDasharray: "17 19", strokeDashoffset: 0 }}
                   strokeWidth="3.1586px"
                 ></path>
-              </svg>
+              </svg> */}
+              <img className="svg" src={imgs.web} alt="" />
               <span>Web Development</span>
             </div>
             <div className="logosin">
-              <svg
+              {/* <svg
                 version="1.1"
                 id="elvn-1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -445,7 +452,8 @@ export default function section2() {
                   style={{ strokeDasharray: "33 35", strokeDashoffset: 0 }}
                   strokeWidth="3.1488px"
                 ></path>
-              </svg>
+              </svg> */}
+              <img className="svg" src={imgs.bloackchain} alt="" />
               <span>Blockchain Development</span>
             </div>
           </div>

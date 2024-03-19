@@ -4,9 +4,10 @@ import { icons } from "../Images/icons";
 export default function CTA() {
   return (
     <>
-      <section className="cta relative z-0 lg:items-center h-auto sm:h-auto  ml-4 lg:flex  xl:h-[50vh] sm:ml-8  text-black  md:h-auto   lg:h-[60vh] lg:flex-row lg:w-full text-lg flex flex-col justify-evenly items-start ">
+     <div>
+       <section className="cta relative z-0 lg:items-center h-auto sm:h-auto  ml-4 lg:flex  xl:h-[50vh] sm:ml-8  text-black  md:h-auto   lg:h-[60vh] lg:flex-row lg:w-full text-lg flex flex-col justify-evenly items-start ">
         {/* <div className="empty pt-4"> </div> */}
-        <div className="ctatop  lg:w-3/5 lg:h-auto  flex flex-col h-1/3 justify-around lg:flex-row lg:items-center ">
+        <div className=" pt-10 ctatop  lg:w-3/5 lg:h-auto  flex flex-col h-1/3 justify-around lg:flex-row lg:items-center ">
           <div className="flex flex-col md:h-full md:justify-around   xl:h-auto">
             <span className=" font-bold md:text-[28px] md:inline-block mb-4 w-auto lg:text-2xl">
               Got a Project&#63;
@@ -56,6 +57,7 @@ export default function CTA() {
         </div>
       </section>
       <hr className="mx-auto w-3/4  flex justify-center my-4" />
+     </div>
     </>
   );
 }
