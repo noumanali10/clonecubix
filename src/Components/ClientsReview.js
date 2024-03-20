@@ -45,7 +45,8 @@ export default function ClientsReview() {
         </div>
         <div className=" flex flex-col justify-between items-center h-full sm:h-4/5    ">
           <div>
-            <div className=" flex flex-col justify-evenly items-center lg:items-center h-[60vh] ">
+            <div className=" flex flex-col justify-evenly items-center lg:items-center h-fit
+             ">
               <div className="flex justify-center items-center gap-5">
                 <div
                   className="arrowprv hidden lg:inline-block md:text-2xl md:font-thin "
