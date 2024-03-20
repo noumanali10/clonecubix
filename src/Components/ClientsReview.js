@@ -53,7 +53,7 @@ const onTouchEnd = () => {
                 >
                   <i className="fa-solid fa-arrow-left-long"></i>
                 </div>
-                <div className="text-center w-4/5 h-[50vh]  md:h-[40vh] sm:h-[35dvh] lg:w-3/4 lg:h-auto " onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
+                <div className="text-center w-4/5 h-[50vh]  md:h-[40vh] sm:h-[35vh] lg:w-3/4 lg:h-auto " onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
                   <span className="font-bold text-[23px] leading-normal text-center lg:w-3/4  ">
                     <q className=""> {reviews[currentIndex].reviwe}</q>{" "}
                   </span>
