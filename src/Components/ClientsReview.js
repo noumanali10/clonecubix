@@ -62,7 +62,7 @@ const onTouchEnd = () => {
                   <i className="fa-solid fa-arrow-right-long "></i>
                 </div>
               </div>
-              <div className="flex flex-col mt-16 sm:m-0 justify-end  ">
+              <div className="flex flex-col mt-16 sm:m-0 justify-end h-[1vh]  ">
                 <div className="flex justify-center text-[22px] font-semibold leading-snug sm:m-0 lg:mt-8 ">
                   <span className="">{reviews[currentIndex].name},</span>
                   <span>{reviews[currentIndex].design}</span>
