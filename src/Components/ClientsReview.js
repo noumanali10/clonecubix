@@ -37,7 +37,7 @@ const onTouchEnd = () => {
 
   return (
     <>
-      <section className="reviewmain text-black h-auto bg-[#F5F7FA] w-screen " >
+      <section className="reviewmain text-black h-fit  bg-[#F5F7FA] w-screen " >
         <div className="reviewmainheader text-center py-16 sm:w-4/5 m-auto">
           <span className="font-bold text-[28px] text-center w-full lg:text-[42px]  ">
             We develop enterprise-grade software solutions for businesses.{" "}
@@ -45,7 +45,7 @@ const onTouchEnd = () => {
         </div>
         <div className=" flex flex-col justify-between items-center h-full sm:h-4/5    ">
           <div>
-            <div className=" flex flex-col justify-between items-center lg:items-center  ">
+            <div className=" flex flex-col justify-between items-center lg:items-center h-auto ">
               <div className="flex justify-center items-center gap-5">
                 <div
                   className="arrowprv hidden lg:inline-block md:text-2xl md:font-thin "
