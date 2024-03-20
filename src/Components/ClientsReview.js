@@ -16,28 +16,28 @@ export default function ClientsReview() {
   const onTouchStart = (e) => {
     setTouchEnd(null); // Reset touchEnd to null on new touch start
     setTouchStart(e.targetTouches[0].clientX);
-};
+  };
 
-const onTouchMove = (e) => {
+  const onTouchMove = (e) => {
     setTouchEnd(e.targetTouches[0].clientX);
-};
+  };
 
-const onTouchEnd = () => {
+  const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
     const distance = touchStart - touchEnd;
     const isSwipeLeft = distance > minSwipeDistance;
     const isSwipeRight = distance < -minSwipeDistance;
 
     if (isSwipeLeft) {
-        nextReview();
+      nextReview();
     } else if (isSwipeRight) {
-        prevReview();
+      prevReview();
     }
-};
+  };
 
   return (
     <>
-      <section className="reviewmain text-black h-fit  bg-[#F5F7FA] w-screen " >
+      <section className="reviewmain text-black h-fit  bg-[#F5F7FA] w-screen ">
         <div className="reviewmainheader text-center py-16 sm:w-4/5 m-auto">
           <span className="font-bold text-[28px] text-center w-full lg:text-[42px]  ">
             We develop enterprise-grade software solutions for businesses.{" "}
@@ -45,7 +45,7 @@ const onTouchEnd = () => {
         </div>
         <div className=" flex flex-col justify-between items-center h-full sm:h-4/5    ">
           <div>
-            <div className=" flex flex-col justify-between items-center lg:items-center h-fit ">
+            <div className=" flex flex-col justify-evenly items-center lg:items-center h-[60vh] ">
               <div className="flex justify-center items-center gap-5">
                 <div
                   className="arrowprv hidden lg:inline-block md:text-2xl md:font-thin "
@@ -53,16 +53,24 @@ const onTouchEnd = () => {
                 >
                   <i className="fa-solid fa-arrow-left-long"></i>
                 </div>
-                <div className="text-center w-4/5 h-[50vh]  md:h-[40vh] sm:h-[35vh] lg:w-3/4 lg:h-auto " onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
+                <div
+                  className="text-center w-4/5 h-fit lg:w-3/4  "
+                  onTouchStart={onTouchStart}
+                  onTouchMove={onTouchMove}
+                  onTouchEnd={onTouchEnd}
+                >
                   <span className="font-bold text-[23px] leading-normal text-center lg:w-3/4  ">
                     <q className=""> {reviews[currentIndex].reviwe}</q>{" "}
                   </span>
                 </div>
-                <div className="arrowright hidden lg:inline-block md:text-2xl md:font-thin" onClick={nextReview}>
+                <div
+                  className="arrowright hidden lg:inline-block md:text-2xl md:font-thin"
+                  onClick={nextReview}
+                >
                   <i className="fa-solid fa-arrow-right-long "></i>
                 </div>
               </div>
-              <div className="flex flex-col mt-16 sm:m-0 justify-end h-[1vh]  ">
+              <div className="flex flex-col mt-16 sm:m-0 justify-evenly  items-center   ">
                 <div className="flex justify-center text-[22px] font-semibold leading-snug sm:m-0 lg:mt-8 ">
                   <span className="">{reviews[currentIndex].name},</span>
                   <span>{reviews[currentIndex].design}</span>
@@ -70,15 +78,15 @@ const onTouchEnd = () => {
                 <div className="flex justify-center text-[19.2px] font-normal ">
                   <span>{reviews[currentIndex].comapany}</span>
                 </div>
+                <div className="flex gap-10 sm:mt-8 sm:gap-16 md:text-2xl md:font-thin lg:hidden text-primary ">
+                  <div className="arrowprv" onClick={prevReview}>
+                    <i className="fa-solid fa-arrow-left-long"></i>
+                  </div>
+                  <div className="arrowright" onClick={nextReview}>
+                    <i className="fa-solid fa-arrow-right-long"></i>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="flex gap-10 sm:mt-8 sm:gap-16 md:text-2xl md:font-thin lg:hidden text-primary ">
-            <div className="arrowprv" onClick={prevReview}>
-              <i className="fa-solid fa-arrow-left-long"></i>
-            </div>
-            <div className="arrowright" onClick={nextReview}>
-              <i className="fa-solid fa-arrow-right-long"></i>
             </div>
           </div>
         </div>
