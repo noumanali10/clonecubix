@@ -1,16 +1,16 @@
 import gt from "./svgexport-9.svg";
-import leftimg1 from "./leftimg1.webp"
-import leftimg2 from "./leftimg2.webp"
-import leftimg3 from "./leftimg3.webp"
-import leftimg4 from "./leftimg4.webp"
-import rightimg1 from "./rightimg1.webp"
-import rightimg2 from "./rightimg2.webp"
-import rightimg3 from "./rightimg3.webp"
-import rightimg4 from "./rightimg4.webp"
-import app from '../Images/app development.png'
-import game from './game-development.png'
-import web from './web-programming.png'
-import bloackchain from './blockchain.png'
+import leftimg1 from "./leftimg1.webp";
+import leftimg2 from "./leftimg2.webp";
+import leftimg3 from "./leftimg3.webp";
+import leftimg4 from "./leftimg4.webp";
+import rightimg1 from "./rightimg1.webp";
+import rightimg2 from "./rightimg2.webp";
+import rightimg3 from "./rightimg3.webp";
+import rightimg4 from "./rightimg4.webp";
+import app from "../Images/app development.png";
+import game from "./game-development.png";
+import web from "./web-programming.png";
+import bloackchain from "./blockchain.png";
 
 const localDB = [
   {
@@ -217,7 +217,6 @@ const localDB = [
             name: "Events",
             des: "Global tech events",
           },
-          
         ],
       },
     ],
@@ -241,5 +240,35 @@ const imgs = {
   web,
   bloackchain,
 };
+const reviews = [
+  {
+    reviwe:
+      "The app sparked interest in the market and attracted initial users, while receiving no complaints about its functionality a usability. Cubix excelled at addressing user experience concerns, communicating clearly, and investing in the project's potential.",
+    name: "John Yates",
+    design: "Founder",
+    comapany: "Pee Spots",
+  },
+  {
+    reviwe:
+      "Thank you again for the successful launch of the 3M and Converse applications. Your dedication, hard-work, flexibility, patience and professionalism is recognized and appreciated. I would recommend Social Cubix to any company wishing to create their application!",
+    name: "Michael Guzman",
+    design: "Director",
+    comapany: "Sapient",
+  },
+  {
+    reviwe:
+      "The team stood out because of their swift response time and patience. Cubix provided one contact person, which helped streamline project management and coordination. Not only did Cubix follow the budget and timeline, the team even offered additional services at no extra charge.",
+    name: "Karen Agresti",
+    design: "Founder",
+    comapany: "Nomidate",
+  },
+  {
+    reviwe:
+      "Willing to accommodate nonprofit budgets, Cubix brought their robust experience to the project. They checked in consistently, and were communicative, easy to reach, and responsive. The Android app shows over 500 downloads to date.",
+    name: "Melissa Steward",
+    design: "VP of Marketing",
+    comapany: "National Fatherhood Initiative",
+  },
+];
 
-export { icons, localDB,imgs };
+export { icons, localDB, imgs, reviews };

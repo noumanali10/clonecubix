@@ -1,21 +1,22 @@
 import React from "react";
 import "./App.css";
-// Importing components. Uncomment the ones you need.
-// import ServicesDropDown from "./Components/ServicesDropDown";
 import CTA from "./Components/CTA";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Section2 from "./Components/section2";
 import Project from "./Components/Project";
-// If you decided not to use Hero, comment it out and use the other imports as needed.
+import ClientsReview from "./Components/ClientsReview";
+
 
 function App() {
   return (
     <>
       <Navbar/>
+      {/* <Navbar2/> */}
         <Hero />
         <Section2/>
+        <ClientsReview/>
         <Project/>
         <CTA />
         <Footer />
