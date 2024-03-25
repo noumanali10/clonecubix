@@ -4,7 +4,9 @@
 
   font-family: 'Averta',sans-serif;
 }
-
+.navimgwhite{
+  @apply w-[90px]
+}
 .navimg{
   @apply w-[37px];
   @apply sm:w-[67px];
@@ -57,3 +59,4 @@
   fill:black;
   filter: brightness(100) invert(0);
 }
+

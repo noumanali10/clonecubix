@@ -3,7 +3,7 @@ import React from "react";
 export default function Project() {
   return (
     <>
-      <div className="StartProject h-auto">
+      <div className="StartProject h-auto ">
         <div className="h-[45vh] flex flex-col  items-center">
           <div className="Ptxt flex flex-col justify-center items-center h-1/2">
             <span className="text-[28px] font-bold text-center  flex justify-center items-center flex-col">
