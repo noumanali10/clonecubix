@@ -14,8 +14,11 @@ import MainSecton from "./Components/MajorSection/MainSecton";
 function App() {
   return (
     <>
-      <div className=" overflow-x-hidden" >
-      {/* <Navbar/>
+
+      <div className=" overflow-x-hidden " >
+      <Navbar/>
+
+     
       <Navbar2/>
         <Hero />
         <Section2/> */}
