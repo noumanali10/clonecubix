@@ -48,6 +48,7 @@
 }
 .logosin span{
   @apply text-wrap w-11/12 text-center gap-4 active:text-[#000];
+  @apply md:text-base lg:text-sm;
   fill: green;
 }
 .icon-shape {
@@ -60,6 +61,8 @@
 .svg{
   @apply h-16 w-16;
   filter: brightness(0) invert(1);
+  @apply md:h-14 md:w-14;
+  @apply lg:h-12 lg:w-12;
 }
 .svg:active{
   fill:black;

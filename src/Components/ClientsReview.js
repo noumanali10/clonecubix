@@ -38,7 +38,7 @@ export default function ClientsReview() {
   return (
     <>
       <section className="reviewmain text-black h-fit  bg-[#F5F7FA] w-screen ">
-        <div className="reviewmainheader text-center py-16 sm:w-4/5 m-auto">
+        <div className="reviewmainheader text-center py-16 sm:w-4/5 m-auto customsection2:w-[97%] ">
           <span className="font-bold text-[28px] text-center w-full lg:text-[42px]  ">
             We develop enterprise-grade software solutions for businesses.{" "}
           </span>

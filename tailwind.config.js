@@ -6,6 +6,7 @@ module.exports = {
       screens: {
         xsm: "360px",
         smd: "503px",
+        customsection2:"450px",
       },
       colors: {
         primary: "#4869E8",
