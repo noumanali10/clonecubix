@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       screens: {
         xsm: "360px",
-        smd:"503px",
+        smd: "503px",
       },
       colors: {
         primary: "#4869E8",
@@ -13,7 +13,10 @@ module.exports = {
       backgroundImage: {
         "hero-pattern":
           "url('https://www.cubix.co/storage/app/media/home/banner-slider-img/modernizing-mobile-platforms-opt-updated-img.webp')",
-      }
+      },
+      img: {
+       maxwidth: "none",
+      },
     },
   },
   plugins: [],

@@ -7,19 +7,23 @@ import Hero from "./Components/Hero";
 import Section2 from "./Components/section2";
 import Project from "./Components/Project";
 import ClientsReview from "./Components/ClientsReview";
+import Navbar2 from "./Components/Navbar2";
 
 
 function App() {
   return (
     <>
+      <div className=" overflow-x-hidden" >
       <Navbar/>
-      {/* <Navbar2/> */}
+      <Navbar2/>
         <Hero />
         <Section2/>
         <ClientsReview/>
         <Project/>
         <CTA />
         <Footer />
+
+      </div>
      
     </>
   );

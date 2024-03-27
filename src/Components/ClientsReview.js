@@ -49,7 +49,7 @@ export default function ClientsReview() {
              ">
               <div className="flex justify-center items-center gap-5">
                 <div
-                  className="arrowprv hidden lg:inline-block md:text-2xl md:font-thin "
+                  className="arrowprv hidden lg:inline-block md:text-2xl md:font-thin self-center"
                   onClick={prevReview}
                 >
                   <i className="fa-solid fa-arrow-left-long"></i>
@@ -60,18 +60,18 @@ export default function ClientsReview() {
                   onTouchMove={onTouchMove}
                   onTouchEnd={onTouchEnd}
                 >
-                  <span className="font-bold text-[23px] leading-normal text-center lg:w-3/4  ">
+                  <span className="font-bold text-[23px] leading-normal text-center lg:max-w-sm  ">
                     <q className=""> {reviews[currentIndex].reviwe}</q>{" "}
                   </span>
                 </div>
                 <div
-                  className="arrowright hidden lg:inline-block md:text-2xl md:font-thin"
+                  className="arrowright hidden lg:inline-block md:text-2xl md:font-thin self-center"
                   onClick={nextReview}
                 >
                   <i className="fa-solid fa-arrow-right-long "></i>
                 </div>
               </div>
-              <div className="flex flex-col mt-16 sm:m-0 justify-evenly  items-center   ">
+              <div className="flex flex-col mt-16 sm:m-0 justify-evenly  items-center md:mt-8  ">
                 <div className="flex justify-center text-[22px] font-semibold leading-snug sm:m-0 lg:mt-8 ">
                   <span className="">{reviews[currentIndex].name},</span>
                   <span>{reviews[currentIndex].design}</span>
