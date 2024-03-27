@@ -13,7 +13,7 @@ import Navbar2 from "./Components/Navbar2";
 function App() {
   return (
     <>
-      <div className=" overflow-x-hidden" >
+      <div className=" overflow-x-hidden " >
       <Navbar/>
       <Navbar2/>
         <Hero />
