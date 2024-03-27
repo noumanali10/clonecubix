@@ -10,23 +10,20 @@ import ClientsReview from "./Components/ClientsReview";
 import Navbar2 from "./Components/Navbar2";
 import MainSecton from "./Components/MajorSection/MainSecton";
 
-
 function App() {
   return (
     <>
-      <div className=" overflow-x-hidden" >
-      <Navbar/>
-      <Navbar2/>
+      <div className="overflow-x-hidden">
+        <Navbar />
+        <Navbar2 />
         <Hero />
-        <Section2/>
-        <MainSecton/>
-        <ClientsReview/>
-        <Project/>
+        <Section2 />
+        <MainSecton />
+        <ClientsReview />
+        <Project />
         <CTA />
         <Footer />
-
       </div>
-     
     </>
   );
 }

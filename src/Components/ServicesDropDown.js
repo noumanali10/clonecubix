@@ -8,7 +8,8 @@ export default function ServicesDropDown() {
   const items2 = localDB[0].services[0].items2;
   return (
     <>
-      <div className="lg:font-light  lg:bg-white lg:text-black lg:top-20  lg:-left-[7.1%] h-full flex flex-col ml-6 relative z-40  lg:absolute lg:h-fit lg:w-screen  lg:z-40  lg:flex-row 2xl:-left-[14.45%] ">
+   
+     <div className="overflow-x-hidden lg:font-light  lg:bg-white lg:text-black lg:top-20   h-full flex flex-col  relative z-40  lg:absolute lg:h-fit lg:w-screen lg:overflow-hidden lg:z-40  lg:flex-row   right-0 lg:bottom-0 2xl:-left-[12.5%] lg:-left-[3.2rem] xl:-left-[3.5rem]">
         <div className="Similartop flex flex-col ml-3  lg:w-1/4 lg:justify-centers  ">
           <div className="flex flex-col py-15 px-6">
             <span className="text-xl mt-4">{localDB[0].services[0].title}</span>
@@ -34,6 +35,7 @@ export default function ServicesDropDown() {
          </div>
         </div>
       </div>
+     
     </>
   );
 }
