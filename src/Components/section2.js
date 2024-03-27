@@ -21,7 +21,7 @@ export default function section2() {
           </div>
           <div className="flex justify-center items-center ">
             <div
-              className="logos flex flex-wrap justify-around h-full  sm:w-full customsection2:w-[70%]  
+              className="logos flex flex-wrap justify-around h-full  sm:w-full customsection2:w-[70%] xl:w-3/5  
            "
             >
               <div className="logosin w-1/2 ">
