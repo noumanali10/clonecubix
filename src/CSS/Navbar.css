@@ -49,19 +49,26 @@
   @apply flex flex-col pt-2;
   
 }
+.centerdiscription2{
+@apply lg:flex lg:flex-wrap  lg:justify-between ;
+}
 .Similara{
-    @apply text-primary text-[15px]  inline hover:underline ;
+    @apply text-primary text-[15px]  inline hover:underline lg:font-semibold ;
 }
 .servicespan{
   @apply font-[14px] ;
 }
 .centerdiscription{
-    @apply flex flex-col;
+    @apply flex flex-col ;
 
 }
-.centerdiscription span{
-  @apply font-[14px] py-1;
+.centerdiscription2 span{
+  /* @apply font-[14px] py-1; */
 }
+.centerdiscription span{
+  @apply font-[14px] py-1 lg:font-light ;
+}
+
 /* .move-down-step1 {
     animation: moveDownStep1 1s linear forwards;
   }

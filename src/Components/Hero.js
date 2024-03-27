@@ -26,8 +26,8 @@ export default function Hero() {
               <div className="heroLower lg:items-center lg:flex-row lg:h-1/5 flex flex-col justify-around bg-[#000000b0] rounded h-1/3 lg:justify-evenly sm:h-2/6">
                 <div className="top  lg:w-2/5 flex flex-col items-center h-2/5 justify-around lg:flex-row ">
                   <h4 className="font-medium text-xl lg:text-sm sm:text-sm  ">Trusted by</h4>
-                  <div className="topimgs flex w-full justify-around ">
-                    <img className="topimg" src={imgs.leftimg1} alt="" />
+                  <div className="topimgs flex w-full justify-around items-center ">
+                    <img className=" lg:h-[13px] topimg " src={imgs.leftimg1} alt="" />
                     <img className="topimg" src={imgs.leftimg2} alt="" />
                     <img className="topimg circleimg" src={imgs.leftimg3} alt="" />
                     <img className="topimg circleimg " src={imgs.leftimg4} alt="" />

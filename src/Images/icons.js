@@ -153,10 +153,7 @@ const localDB = [
             name: "Visions Development",
             des: "VisionPro App and Game Development",
           },
-          {
-            name: "Big Data",
-            des: "Apps integrated with Big Data",
-          },
+          
         ],
       },
     ],

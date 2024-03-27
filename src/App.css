@@ -4,6 +4,9 @@
 
   font-family: 'Averta',sans-serif;
 }
+.containernav{
+@apply flex justify-center items-center h-full ;
+}
 .navimgwhite{
   @apply w-[90px]
 }
@@ -23,6 +26,9 @@
   @apply flex justify-center items-center;
 }
 .Similara{
+    @apply text-primary text-[15px] font-semibold;
+}
+.Similara2{
     @apply text-primary text-[15px] font-semibold;
 }
 .Similarcenter span{
