@@ -9,8 +9,8 @@ export default function Hero() {
         <div className="mainhero flex justify-center items-center it w-screen   bg-hero-pattern bg-cover bg-center h-[85vh] lg:h-screen sm:h-screen ">
           <div className='main w-11/12 2xl:w-4/5    h-full flex justify-center items-center lg:justify-items-start "'>
             <div className="h-[90%]  w-full flex flex-col justify-evenly  ">
-              <div className=" heroText mt-6  h-1/2 flex flex-col items-center justify-evenly lg:justify-evenly lg:h-3/4  lg:items-start sm:items-start ">
-                <h1 className="text-3xl font-bold lg:font-bold lg:text-[50px] lg:w-1/2  leading-snug text-left ">
+              <div className=" heroText mt-6  h-1/2 flex flex-col items-center justify-evenly lg:justify-evenly lg:h-3/4  lg:items-start sm:items-start 2xl:h-3/6 md:h-2/6 ">
+                <h1 className="text-3xl font-bold lg:font-bold lg:text-[50px] lg:w-1/2  leading-snug text-left 2xl:w-2/6 md:w-3/6 ">
                   Modernizing Mobile Platforms
                 </h1>
                 <p className="font-normal text-base leading-relaxed self-center text-center  text-[rgba(255,255,255,.9)] w-full lg:self-start lg:text-left  lg:w-2/5 sm:text-left ">
@@ -23,7 +23,7 @@ export default function Hero() {
                   </button>
                 </div>
               </div>
-              <div className="heroLower lg:items-center lg:flex-row lg:h-1/5 flex flex-col justify-around bg-[#000000b0] rounded h-1/3 lg:justify-evenly sm:h-2/6">
+              <div className="heroLower lg:items-center lg:flex-row lg:h-1/5 flex flex-col justify-around bg-[#000000b0] rounded h-1/3 lg:justify-evenly sm:h-2/6 md:h-1/4">
                 <div className="top  lg:w-2/5 flex flex-col items-center h-2/5 justify-around lg:flex-row ">
                   <h4 className="font-medium text-xl lg:text-sm sm:text-sm  ">Trusted by</h4>
                   <div className="topimgs flex w-full justify-around items-center ">
