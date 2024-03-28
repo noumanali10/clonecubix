@@ -8,7 +8,15 @@ const SimmilarDropDown = ({ items, flexDirection,width}) => {
   const widthClass = width ? `lg:w-${width.replace('main', '2/5')}` : '';
   return (
     
-
+    //   <div className="centerdiscription2 lg:font-light   lg:w-full lg:flex lg:flex-row ">
+    //   {items.map((item, index) => (
+    //     <div key={index} className="mb-4 flex flex-col  w-2/5  ">
+    //       <a className='Similara lg:font-light ' href="/">{item.name}</a>
+    //       <span className='lg:font-light  '>{item.des}</span>
+    //       {/* <p>{item.des}</p>  */}
+    //     </div>
+    //   ))}
+    // </div>
     <div className={`centerdiscription2 lg:font-light lg:w-full lg:flex lg:h-fit  ${directionClass}`}>
     {items.map((item, index) => (
       <div key={index} className={`mb-4 flex flex-col lg:h-fit ${widthClass}`}>
