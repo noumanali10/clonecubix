@@ -18,7 +18,7 @@ const localDbMain = [
       {
         img1: "https://www.cubix.co/themes/responsiv-clean/assets/images/home/home-webp/foodly-mobile-1-opt.webp",
         img2: "https://www.cubix.co/themes/responsiv-clean/assets/images/home/home-webp/foodly-mobile-2-opt.webp",
-        img3: "https://www.cubix.co/themes/responsiv-clean/assets/imaghttps://www.cubix.co/themes/responsiv-clean/assets/images/home/foodly-sec-icn.pnges/home/micropet-homeicon-top.png",
+        img3: "https://www.cubix.co/themes/responsiv-clean/assets/images/home/micropet-homeicon-top.png",
         smallText: "mobile app",
         textMain: "Foodly - the hub of delicious cuisines",
         textDes:

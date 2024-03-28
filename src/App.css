@@ -83,5 +83,6 @@
 }
 .center{
   @apply flex justify-center items-center;
+  @apply mainsection:justify-start mainsection:items-start;
 }
 
