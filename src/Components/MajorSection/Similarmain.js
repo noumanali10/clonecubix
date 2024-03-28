@@ -13,10 +13,10 @@ export default function Similarmain({ items, width, flexDirection }) {
   return (
     <div>
       {items.map((item, index) => (
-        <div key={index} className={`flex flex-col-reverse h-auto justify-around w-full items-center ${directionClass}`}>
+        <div key={index} className={`flex flex-col-reverse h-auto justify-around w-full items-center my-4 ${directionClass}`}>
           <div className="main1 mt-6 mainsection:ml-6 smd:mt-8 mainsection:center w-full">
 
-            <div className="texts flex flex-col justify-center items-center mainsection:justify-start lg:h-[40vh] lg:justify-around ">
+            <div className="texts flex flex-col justify-center items-center mainsection:justify-start lg:h-full 2xl:h-[40vh] 2xl:justify-around ">
               <div className="justify-center items-center flex mainsection:justify-start w-full lg:text-start lg:w-9/12  ">
                 <img className="w-20 h-20 " src={item.img3} alt="" />
               </div>
@@ -27,9 +27,9 @@ export default function Similarmain({ items, width, flexDirection }) {
               <span className="titledes text-[19px] font-normal text-center w-11/12 lg:text-start lg:w-9/12   ">
                 {item.textDes}
               </span>
-            </div>
-            <div className="my-4 container">
+            <div className="my-4 lg:w-9/12 flex justify-center items-center lg:justify-start ">
               <button className="h-10 w-48 lg:h-16 lg:w-52 rounded-sm bg-primary text-white capitalize lg:text-lg">{item.btnText}</button>
+            </div>
             </div>
           </div>
           <div className=" ml-10 m-auto mainsection:m-0 main2 flex justify-center items-center  w-full   h-[60vh] sm:h-3/5  mainsection:w-f[40vw] container   ">
