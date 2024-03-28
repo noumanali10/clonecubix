@@ -5,7 +5,7 @@ import "../CSS/Hero.css";
 export default function Hero() {
   return (
     <>
-      <section className="hero text-white ">
+      <section className="hero hero-section text-white ">
         <div className="mainhero flex justify-center items-center it w-screen   bg-hero-pattern bg-cover bg-center h-[85vh] lg:h-screen sm:h-screen ">
           <div className='main w-11/12 2xl:w-4/5    h-full flex justify-center items-center lg:justify-items-start "'>
             <div className="h-[90%]  w-full flex flex-col justify-evenly  ">

@@ -4,7 +4,8 @@ import SolutionsDropDown from "./solutionsDropDown";
 import AboutDropDown from "./aboutDropDown";
 import ResourcesDropDown from "./resourcesDropDown";
 
-export default function Navbar2() {
+export default function Navbar2({ isSticky }) {
+
   const [hoverState, setHoverState] = useState({
     services: false,
     solutions: false,
@@ -18,14 +19,13 @@ export default function Navbar2() {
   const updateHoverState = (section, isHovered) => {
     setHoverState((prevState) => ({ ...prevState, [section]: isHovered }));
   };
- 
 
   useEffect(() => {
     const isAnySectionHovered = Object.values(hoverState).some(
       (state) => state === true
     );
     if (isAnySectionHovered) {
-      document.body.style.overflow = ""; // Enable body scroll
+      document.body.style.overflowX = "hidden"; // Enable body scroll
       document.getElementById("navbar").style.backgroundColor = "white";
       setTextColor("black");
       // src="https://www.cubix.co/themes/responsiv-clean/assets/img/cubix-logo-dark.svg"
@@ -40,13 +40,33 @@ export default function Navbar2() {
         "https://www.cubix.co/themes/responsiv-clean/assets/img/cubix-logo.svg"
       );
     }
-  }, [hoverState]); // Depend on hoverState to apply side effects
+  }, [hoverState]);
+useEffect(()=>{
+  if (isSticky === true) {
+    document.getElementById("navbar").style.backgroundColor = "white";
+    setTextColor("black");
+    // src="https://www.cubix.co/themes/responsiv-clean/assets/img/cubix-logo-dark.svg"
+    setImageSrc(
+      "https://www.cubix.co/themes/responsiv-clean/assets/img/cubix-logo-dark.svg"
+    );
+  } else {
+    document.getElementById("navbar").style.backgroundColor = "";
+    setTextColor("white");
+    setImageSrc(
+      "https://www.cubix.co/themes/responsiv-clean/assets/img/cubix-logo.svg"
+    );
+
+  }
+},[isSticky])
 
   return (
     <>
       <div
         id="navbar"
-        className="  lg:flex justify-center text-white hidden border-red-700 lg:h-20 lg:absolute w-full   "
+        // className="navbar  lg:flex justify-center text-white hidden border-red-700 lg:h-20 lg:absolute w-full   "
+        className={`navbar lg:flex justify-center text-white hidden lg:h-20 w-full  ${
+          isSticky ? "sticky" : ""
+        }`}
       >
         <div
           id="navbar"
