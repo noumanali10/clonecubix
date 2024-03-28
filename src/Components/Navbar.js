@@ -6,7 +6,7 @@ import "../CSS/Navbar.css";
 import { icons } from "../Images/icons";
 import ResourcesDropDown from "./resourcesDropDown";
 
-export default function Navbar() {
+export default function Navbar({ isSticky }) {
   const [toggle, setToggle] = useState(true);
   const [toggleServices, setToggleServices] = useState(false);
   const [toggleSolutions, setToggleSolutions] = useState(false);
@@ -60,7 +60,12 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="flex lg:hidden   fixed z-50   justify-around xsm:justify-between xsm:px-8 items-center navbar h-[65px] w-screen bg-white mt-0 top-0 sm:[20vh]">
+      <div
+      //  className="flex lg:hidden    fixed z-50   justify-around xsm:justify-between xsm:px-8 items-center navbar h-[65px] w-screen bg-white mt-0 top-0 sm:[20vh]"
+      className={`flex lg:hidden    fixed z-50   justify-around xsm:justify-between xsm:px-8 items-center navbar h-[65px] w-screen bg-white mt-0 top-0 sm:[20vh] ${
+        isSticky ? "sticky" : ""
+      }`}
+       >
         <div className="navleft">
           <div className="logo w-[97px]">
             <img

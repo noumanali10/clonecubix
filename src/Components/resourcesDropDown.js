@@ -6,7 +6,7 @@ export default function resourcesDropDown() {
   const items = localDB[0].resources[0].items;
   return (
     <>
-      <div className="lg:font-light  lg:bg-white lg:text-black lg:top-20   h-full flex flex-col  relative z-40  lg:absolute lg:h-fit lg:w-screen  lg:z-40  lg:flex-row  2xl:-left-[12.5%] lg:-left-[3.2rem] xl:-left-[3.5rem]  ">
+      <div className="lg:font-light  lg:bg-white lg:text-black lg:top-20   h-full flex flex-col  relative z-40  lg:absolute lg:h-fit lg:w-[102vw]  lg:z-40  lg:flex-row  2xl:-left-[12.5%] lg:-left-[3.2rem] xl:-left-[4.5rem]  ">
         <div className="Similartop flex flex-col ml-3  lg:w-1/4 lg:justify-centers  ">
           <div className="flex flex-col py-15 px-6">
             <span className="text-xl mt-4">{localDB[0].resources[0].title}</span>
