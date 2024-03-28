@@ -59,6 +59,7 @@ export default function Navbar() {
   };
 
   return (
+    
     <>
       <div className="flex lg:hidden   fixed z-50   justify-around xsm:justify-between xsm:px-8 items-center navbar h-[65px] w-screen bg-white mt-0 top-0 sm:[20vh]">
         <div className="navleft">
