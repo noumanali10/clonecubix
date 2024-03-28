@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import "./App.css";
 import CTA from "./Components/CTA";
 import Footer from "./Components/Footer";
@@ -12,14 +12,25 @@ import MainSecton from "./Components/MajorSection/MainSecton";
 
 
 function App() {
+  const [isSticky, setIsSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroHeight = document.querySelector('.hero-section').offsetHeight;
+      setIsSticky(window.scrollY >= heroHeight);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
 
       <div className=" overflow-x-hidden" >
-      <Navbar/>
+      <Navbar isSticky={isSticky}/>
 
      
-      <Navbar2/>
+      <Navbar2 isSticky={isSticky} />
         <Hero />
         <Section2/> 
         <MainSecton/>

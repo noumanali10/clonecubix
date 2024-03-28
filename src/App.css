@@ -68,4 +68,17 @@
   fill:black;
   filter: brightness(100) invert(0);
 }
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  
+  z-index: 1000;
+  transition: top 0.3s ease, background-color 0.3s ease; /* Smooth transition for top and background-color */
+}
+.sticky {
+  position: fixed;
+  top: 0; 
+ 
+}
 
