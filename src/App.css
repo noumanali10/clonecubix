@@ -81,4 +81,7 @@
   top: 0; 
  
 }
+.center{
+  @apply flex justify-center items-center;
+}
 

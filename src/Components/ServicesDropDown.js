@@ -18,7 +18,7 @@ export default function ServicesDropDown() {
             </span>
           </div>
         </div>
-        <div className="lg:w-1/2 ">
+        <div className="lg:w-1/2 ml-4  ">
           <p className="font-semibold lg:font-light inline-block text-xl py-3 ">
             {localDB[0].services[0].minititle}
           </p>
@@ -26,7 +26,7 @@ export default function ServicesDropDown() {
             <Simmilar items={items1} flexDirection="row" width="main" />
           </div>
         </div>
-        <div className="lg:bg-slate-100 lg:w-1/3 ">
+        <div className="lg:bg-slate-100 lg:w-1/3 ml-4 ">
          <div className="lg:ml-4">
          <p className="font-semibold lg:font-light inline-block text-xl py-3 ">
             {localDB[0].services[0].minititle2}

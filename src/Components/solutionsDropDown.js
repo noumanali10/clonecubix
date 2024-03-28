@@ -18,7 +18,7 @@ export default function solutionsDropDown() {
             </span>
           </div>
         </div>
-        <div className="lg:flex lg:flex-col lg:w-1/2">
+        <div className="lg:flex lg:flex-col lg:w-1/2 ml-4 ">
           <p className="font-semibold lg:font-light inline-block text-xl py-3">
             {localDB[0].solutions[0].minititle}
           </p>
@@ -26,7 +26,7 @@ export default function solutionsDropDown() {
         </div>
 
         <div>
-        <div className="lg:bg-slate-100 lg:w-full lg:h-full ">
+        <div className="lg:bg-slate-100 lg:w-full lg:h-full ml-4  ">
          <div className="lg:ml-4">
           <div className="lg:flex lg:flex-col  lg:w-11/12  ">
             <p className="font-semibold lg:font-light inline-block text-xl py-3">
