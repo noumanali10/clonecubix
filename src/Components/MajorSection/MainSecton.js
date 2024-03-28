@@ -9,7 +9,7 @@ const section3=localDbMain[0].section3
 const section4=localDbMain[0].section4
   return (
     <div className='w-screen  '>
-     <div className="toptext  w-3/4  text-center    my-8 lg:my-16  m-auto  2xl:w-2/5">
+     <div className="toptext  w-3/4  text-center    mt-4 lg:my-16  m-auto  2xl:w-2/5">
       <span className='font-bold text-[28px] leading-normal  w-4/5 lg:w-2/4 lg:text-[42px]  lg:container '>
       We love transforming product ideas to digital realities.
       </span>
