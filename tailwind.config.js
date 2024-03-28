@@ -7,6 +7,7 @@ module.exports = {
         xsm: "360px",
         smd: "503px",
         customsection2:"450px",
+        mainsection:"796px",
       },
       colors: {
         primary: "#4869E8",
