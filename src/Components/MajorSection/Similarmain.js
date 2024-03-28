@@ -16,7 +16,7 @@ export default function Similarmain({ items, width, flexDirection }) {
         <div key={index} className={`flex flex-col-reverse h-auto justify-around w-full items-center my-4 ${directionClass}`}>
           <div className="main1 mt-6 mainsection:ml-6 smd:mt-8 mainsection:center w-full">
 
-            <div className="texts flex flex-col justify-center items-center mainsection:justify-start lg:h-full lg:justify-around ">
+            <div className="texts flex flex-col justify-center items-center mainsection:justify-start lg:h-full 2xl:h-[40vh] 2xl:justify-around ">
               <div className="justify-center items-center flex mainsection:justify-start w-full lg:text-start lg:w-9/12  ">
                 <img className="w-20 h-20 " src={item.img3} alt="" />
               </div>
