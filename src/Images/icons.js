@@ -153,7 +153,6 @@ const localDB = [
             name: "Visions Development",
             des: "VisionPro App and Game Development",
           },
-          
         ],
       },
     ],
@@ -267,5 +266,22 @@ const reviews = [
     comapany: "National Fatherhood Initiative",
   },
 ];
-
-export { icons, localDB, imgs, reviews };
+const partnerSection = [
+  {
+    img:'https://www.cubix.co/storage/app/media/home/Google-Developer-Certified-Agency.webp',
+    text:'Google developer certified agency'
+  },
+  {
+    img:'https://www.cubix.co/storage/app/media/home/Adobe-Solution-Partner-Program.webp',
+    text:'Adobe solution partner program'
+  },
+  {
+    img:'https://www.cubix.co/storage/app/media/home/Microsoft-Certified-Consulting-Partner.webp',
+    text:'Microsoft certified consulting partner'
+  },
+  {
+    img:'https://www.cubix.co/storage/app/media/home/Amazon-Web-Services-Partner.webp',
+    text:'Amazon web services partner'
+  },
+];
+export { icons, localDB, imgs, reviews,partnerSection };
