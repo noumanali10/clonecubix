@@ -1,0 +1,8 @@
+body{
+    @apply list-none;
+}
+.techli{
+    @apply font-semibold text-base leading-6 text-[#424242] ;
+    @apply hover:text-primary hover:opacity-90;
+    @apply hover:border-b hover:border-primary space-y-12;
+}

@@ -9,6 +9,7 @@ import Project from "./Components/Project";
 import ClientsReview from "./Components/ClientsReview";
 import Navbar2 from "./Components/Navbar2";
 import MainSecton from "./Components/MajorSection/MainSecton";
+import Technologies from './Components/Technology/Technologies';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Hero />
         <Section2/> 
         <MainSecton/>
+        <Technologies/>
         <ClientsReview/>
         <Project/>
         <CTA />
