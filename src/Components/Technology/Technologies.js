@@ -98,15 +98,92 @@ const Tech = {
       text: "HTML5",
     },
   ],
-  Backend: [{
-    img:{mongoDB},
-    text:"Mongo DB"
-  },
-],
+  Database: [
+    {
+      img:  mongoDB ,
+      text: "Mongo DB",
+    },
+    {
+      img:  mySql ,
+      text: "Mysql",
+    },
+    {
+      img: msSql ,
+      text: "Ms sql",
+    },
+    {
+      img:  firebase ,
+      text: "Firebase",
+    },
+    {
+      img:  dynamodb ,
+      text: "Dynamodb",
+    },
+    {
+      img:  redis ,
+      text: "Redis",
+    },
+  ],
+  Backend: [
+    {
+      img:  php ,
+      text: "Php",
+    },
+    {
+      img:  java ,
+      text: "Java",
+    },
+    {
+      img:  nodejs ,
+      text: "Node .js",
+    },
+  ],
+  CMS: [
+    {
+      img: wordpress ,
+      text: "Wordpress",
+    },
+    {
+      img:  magento ,
+      text: "Magento",
+    },
+    {
+      img:shopify,
+      text:'Shopify'
+    },
+  ],
+  Infra:[
+    {
+      img:aws,
+      text:'Aws'
+    },
+    {
+      img:gradle,
+      text:'Gradle'
+    },
+    {
+      img:jenkins,
+      text:'Jenkins'
+    },
+    {
+      img:appium,
+      text:'Appium'
+    },
+    {
+      img:selenium,
+      text:'Selenium'
+    },
+    {
+      img:selenium,
+      text:'Selenium'
+    },
+  ]
 };
 
 export default function Technologies() {
   let items = Tech.Mobile;
+
+  const [name, setName] = useState("mobile");
   const [itemsState, setItemsState] = useState(items);
   const [checkClick, setCheckClick] = useState(false);
 
@@ -115,42 +192,77 @@ export default function Technologies() {
     if (liname === "mobile") {
       updatedItems = Tech.Mobile;
       setCheckClick(true);
+      setName("mobile");
     } else if (liname === "frontend") {
       updatedItems = Tech.Frontend;
       setCheckClick(true);
+      setName("frontend");
+    }
+    else if(liname==='database'){
+      updatedItems=Tech.Database;
+      setCheckClick(true);
+      setName('database')
+    }
+    else if(liname==='backend'){
+      updatedItems=Tech.Backend;
+      setCheckClick(true);
+      setName('backend')
+
+    }
+    else if(liname==='cms'){
+      updatedItems=Tech.CMS;
+      setCheckClick(true);
+      setName('cms');
+    }
+    else if(liname==='infra'){
+      updatedItems=Tech.Infra;
+      setCheckClick(true);
+      setName('infra');
+
     }
     setItemsState(updatedItems);
   };
 
   return (
     <>
-      <div className="flex justify-around items-center flex-col gap-4  my-16 h-[75vh]">
-        <div className="text-center">
+      <div className="flex justify-around items-center flex-col gap-4   h-[75vh] mb-16">
+        <div className="text-center grow-0">
           <span className="font-bold leading-9 text-[28px] text-center">
             Technologies we work with
           </span>
         </div>
-        <ul className="flex justify-center items-center gap-5  flex-wrap ">
-          <li className="techli" onClick={() => handleClick("mobile")}>
-            {" "}
+        <ul className="flex justify-center items-center gap-5  flex-wrap h-[10%] grow-0">
+          <li
+            className={name === "mobile" ? "techli active" : "techli"}
+            onClick={() => handleClick("mobile")}
+          >
             Mobile
           </li>
-          <li className="techli" onClick={() => handleClick("frontend")}>
+          <li
+            className={name === "frontend" ? "techli active" : "techli"}
+            onClick={() => handleClick("frontend")}
+          >
             Frontend
           </li>
-          <li className="techli">Database</li>
-          <li className="techli">Backend</li>
-          <li className="techli">CMS</li>
-          <li className="techli">Infra and devops </li>
+          <li onClick={()=>handleClick("database")} className={name === "database" ? "techli active" : "techli"}>
+            Database
+          </li>
+          <li onClick={()=>handleClick('backend')} className={name === "backend" ? "techli active" : "techli"}>
+            Backend
+          </li>
+          <li onClick={()=> handleClick('cms')} className={name === "cms" ? "techli active" : "techli"}>CMS</li>
+          <li onClick={()=> handleClick('infra')} className={name === "infra" ? "techli active" : "techli"}>
+            Infra and devops{" "}
+          </li>
         </ul>
-        <div className="flex flex-wrap justify-evenly items-center gap-8 w-11/12">
+        <div className="flex flex-wrap justify-evenly items-center gap-8 w-11/12 grow  ">
           {Array.isArray(itemsState) &&
             itemsState.map((item, index) => (
               <div
                 key={index}
-                className=" flex flex-col justify-around items-center  h-[100px] w-[75px] "
+                className=" flex flex-col justify-around items-center  h-[100px] w-[75px]  "
               >
-                <img className="w-[49px]" src={item.img} alt="" />
+                <img className="w-[49px] h-2/5" src={item.img} alt="img" />
                 <span className="font-semibold text-[15px] text-center">
                   {item.text}
                 </span>
