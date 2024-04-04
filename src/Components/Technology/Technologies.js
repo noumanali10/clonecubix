@@ -225,13 +225,13 @@ export default function Technologies() {
 
   return (
     <>
-      <div className="flex justify-around items-center flex-col gap-4   h-[75vh] mb-16">
-        <div className="text-center grow-0">
+      <div className="flex justify-around items-center flex-col gap-4 ">
+        <div className="text-center grow-0 my-4 w-11/12">
           <span className="font-bold leading-9 text-[28px] text-center">
             Technologies we work with
           </span>
         </div>
-        <ul className="flex justify-center items-center gap-5  flex-wrap h-[10%] grow-0">
+        <ul className="flex justify-center items-center gap-5  flex-wrap h-[10%] grow-0 my-4 w-11/12">
           <li
             className={name === "mobile" ? "techli active" : "techli"}
             onClick={() => handleClick("mobile")}
@@ -260,7 +260,7 @@ export default function Technologies() {
             itemsState.map((item, index) => (
               <div
                 key={index}
-                className=" flex flex-col justify-around items-center  h-[100px] w-[75px]  "
+                className=" flex flex-col justify-around items-center  h-[100px] w-[75px] sm:w-[12%] border border-red-700  "
               >
                 <img className="w-[49px] h-2/5" src={item.img} alt="img" />
                 <span className="font-semibold text-[15px] text-center">
