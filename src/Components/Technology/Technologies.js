@@ -225,9 +225,9 @@ export default function Technologies() {
 
   return (
     <>
-      <div className="flex justify-around items-center flex-col gap-4 ">
+      <div className="flex justify-around items-center flex-col gap-4 md:h-[50vh] lg:h-[40vh] md:mt-16 md:mb-4 ">
         <div className="text-center grow-0 my-4 w-11/12">
-          <span className="font-bold leading-9 text-[28px] text-center">
+          <span className="font-bold leading-9 text-[28px] text-center lg:text-[34px]">
             Technologies we work with
           </span>
         </div>
@@ -255,14 +255,14 @@ export default function Technologies() {
             Infra and devops{" "}
           </li>
         </ul>
-        <div className="flex flex-wrap justify-evenly items-center gap-8 w-11/12 grow  ">
+        <div className="flex flex-wrap justify-evenly items-center md:items-start gap-8  w-11/12 lg:w-3/4 grow 2xl:w-3/5  ">
           {Array.isArray(itemsState) &&
             itemsState.map((item, index) => (
               <div
                 key={index}
-                className=" flex flex-col justify-around items-center  h-[100px] w-[75px] sm:w-[12%] border border-red-700  "
+                className=" flex flex-col justify-around items-center   h-[100px] w-[75px] sm:w-[12%]   "
               >
-                <img className="w-[49px] h-2/5" src={item.img} alt="img" />
+                <img className="w-[49px]  h-2/5" src={item.img} alt="img" />
                 <span className="font-semibold text-[15px] text-center">
                   {item.text}
                 </span>
