@@ -10,6 +10,8 @@ import ClientsReview from "./Components/ClientsReview";
 import Navbar2 from "./Components/Navbar2";
 import MainSecton from "./Components/MajorSection/MainSecton";
 import Technologies from './Components/Technology/Technologies';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Services from '../src/Services Component/serviceHomePage'
 
 
 function App() {
@@ -25,25 +27,35 @@ function App() {
   }, []);
 
   return (
+    <Router>
     <>
+
 
       <div className=" overflow-x-hidden" >
       <Navbar isSticky={isSticky}/>
-
-     
       <Navbar2 isSticky={isSticky} />
-        <Hero />
-        <Section2/> 
-        <MainSecton/>
-        <Technologies/>
-        <ClientsReview/>
-        <Project/>
-        <CTA />
-        <Footer />
+       <Routes>
+          <Route path="/" element={
+            <>
+              {/* Wrap non-route components in a React.Fragment */}
+              <Hero />
+              <Section2 />
+              <MainSecton />
+              <Technologies />
+              <ClientsReview />
+              <Project />
+              <CTA />
+              <Footer/>
+            </>
+          } />
+          <Route path="/Services" element={<Services />} />
+        </Routes>
+        
 
       </div>
      
     </>
+    </Router>
   );
 }
 
