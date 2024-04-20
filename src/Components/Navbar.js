@@ -6,8 +6,7 @@ import AboutDropDown from "./aboutDropDown";
 import "../CSS/Navbar.css";
 import { icons } from "../Images/icons";
 import ResourcesDropDown from "./resourcesDropDown";
-import Services from "../Services Component/serviceHomePage";
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 
 export default function Navbar({ isSticky }) {
   const [toggle, setToggle] = useState(true);
@@ -27,6 +26,9 @@ export default function Navbar({ isSticky }) {
       document.body.classList.remove("no-scroll");
     };
   }, [toggle]);
+  const Refresh=()=>{
+setToggle(true);
+  }
 
   const handleClick2 = (section) => {
     if (section === "services") {
@@ -72,10 +74,10 @@ export default function Navbar({ isSticky }) {
         >
           <div className="navleft">
             <div className="logo w-[97px]">
-              <img
+              <Link  to="/"><img
                 src="https://www.cubix.co/themes/responsiv-clean/assets/img/cubix-logo-dark.svg"
                 alt="logo"
-              />
+              /></Link>
             </div>
           </div>
           <div className="navright flex">
@@ -123,7 +125,7 @@ export default function Navbar({ isSticky }) {
             <ul className="h-auto ">
               <li>
                 <span>
-                  <Link to="/Services">Services</Link>
+                  <Link onClick={()=>Refresh()} to="/Services">Services</Link>
                 </span>
                 <img
                   onClick={() => handleClick2("services")}
@@ -168,7 +170,7 @@ export default function Navbar({ isSticky }) {
               <div className={toggleResources ? "h-auto" : "hidden"}>
                 <ResourcesDropDown />
               </div>
-              <li>Contact</li>
+              <li><Link to="/contactus">Contact</Link></li>
               
             </ul>
         

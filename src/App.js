@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import CTA from "./Components/CTA";
 import Footer from "./Components/Footer";
@@ -9,52 +9,70 @@ import Project from "./Components/Project";
 import ClientsReview from "./Components/ClientsReview";
 import Navbar2 from "./Components/Navbar2";
 import MainSecton from "./Components/MajorSection/MainSecton";
-import Technologies from './Components/Technology/Technologies';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Services from '../src/Services Component/serviceHomePage'
-
+import Technologies from "./Components/Technology/Technologies";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Services from "../src/Services Component/serviceHomePage";
+import Contactus from "../../clonecubix/src/Components/ContactUS/Contactus";
 
 function App() {
   const [isSticky, setIsSticky] = useState(false);
   useEffect(() => {
-    const handleScroll = () => {
-      const heroHeight = document.querySelector('.hero-section').offsetHeight;
-      setIsSticky(window.scrollY >= heroHeight);
-    };
+    const heroSection = document.querySelector(".hero-section");
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    if (heroSection) {
+      const heroHeight = heroSection.offsetHeight;
+
+      const handleScroll = () => {
+        setIsSticky(window.scrollY >= heroHeight);
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      
+      // Cleanup function to remove the event listener when the component unmounts or dependencies change
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, []); 
 
   return (
     <Router>
-    <>
+      <>
+        <div className=" overflow-x-hidden">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  {" "}
+                  <Navbar isSticky={isSticky} />
+                  <Navbar2 isSticky={isSticky} />
+                  <Hero />
+                  <Section2 />
+                  <MainSecton />
+                  <Technologies />
+                  <ClientsReview />
+                  <Project />
+                  <CTA />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/Services"
+              element={
+                <>
+                  <Navbar isSticky={isSticky} />
+                  <Navbar2 isSticky={isSticky} />
+                  <Services />
+                </>
+              }
+            />
 
-
-      <div className=" overflow-x-hidden" >
-      <Navbar isSticky={isSticky}/>
-      <Navbar2 isSticky={isSticky} />
-       <Routes>
-          <Route path="/" element={
-            <>
-              {/* Wrap non-route components in a React.Fragment */}
-              <Hero />
-              <Section2 />
-              <MainSecton />
-              <Technologies />
-              <ClientsReview />
-              <Project />
-              <CTA />
-              <Footer/>
-            </>
-          } />
-          <Route path="/Services" element={<Services />} />
-        </Routes>
-        
-
-      </div>
-     
-    </>
+            <Route path="/Contactus" element={<Contactus />} />
+          </Routes>
+        </div>
+      </>
     </Router>
   );
 }

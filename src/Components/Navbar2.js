@@ -123,7 +123,7 @@ useEffect(()=>{
                   Resources
                   {hoverState.resources && <ResourcesDropDown />}
                 </li>
-                <li style={{ color: textColor }}>Contact</li>
+                <li style={{ color: textColor }}> <Link to="/contactus">Contact</Link> </li>
                 <li
                   style={{ color: textColor }}
                   onClick={() => {

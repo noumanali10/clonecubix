@@ -12,3 +12,8 @@
       
     }
   }
+  @layer base{
+.btn{
+  @apply bg-primary;
+}
+  }

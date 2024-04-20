@@ -4,8 +4,7 @@ body{
 .techli{
     @apply font-semibold text-base leading-6 text-[#424242]  ;
     @apply py-4;
-  /* @apply hover:text-primary hover:opacity-90;
-    @apply active:border-b hover:border-primary space-y-12; */
+    border-bottom: 2px solid gray;
 }
 .active{
   color: #5174fd;

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useEffect } from "react";
+
 import "../Technology/Style.css";
 import ios from "../../Images/svg-export/ic-technology-ios2x.svg";
 import andriod from "../../Images/svg-export/ic-technology-android2x.svg";
@@ -185,38 +185,38 @@ export default function Technologies() {
 
   const [name, setName] = useState("mobile");
   const [itemsState, setItemsState] = useState(items);
-  const [checkClick, setCheckClick] = useState(false);
+  
 
   const handleClick = (liname) => {
     let updatedItems = [];
     if (liname === "mobile") {
       updatedItems = Tech.Mobile;
-      setCheckClick(true);
+      
       setName("mobile");
     } else if (liname === "frontend") {
       updatedItems = Tech.Frontend;
-      setCheckClick(true);
+      
       setName("frontend");
     }
     else if(liname==='database'){
       updatedItems=Tech.Database;
-      setCheckClick(true);
+      
       setName('database')
     }
     else if(liname==='backend'){
       updatedItems=Tech.Backend;
-      setCheckClick(true);
+      
       setName('backend')
 
     }
     else if(liname==='cms'){
       updatedItems=Tech.CMS;
-      setCheckClick(true);
+      
       setName('cms');
     }
     else if(liname==='infra'){
       updatedItems=Tech.Infra;
-      setCheckClick(true);
+      
       setName('infra');
 
     }
@@ -225,7 +225,7 @@ export default function Technologies() {
 
   return (
     <>
-      <div className="flex justify-around items-center flex-col gap-4 md:h-[50vh] lg:h-[40vh] md:mt-16 md:mb-4 ">
+      <div className="flex justify-around items-center flex-col gap-4 md:h-[80vh] lg:h-[76vh] md:mt-16 md:mb-4 ">
         <div className="text-center grow-0 my-4 w-11/12">
           <span className="font-bold leading-9 text-[28px] text-center lg:text-[34px]">
             Technologies we work with
@@ -255,7 +255,7 @@ export default function Technologies() {
             Infra and devops{" "}
           </li>
         </ul>
-        <div className="flex flex-wrap justify-evenly items-center md:items-start gap-8  w-11/12 lg:w-3/4 grow 2xl:w-3/5  ">
+        <div className="flex flex-wrap justify-evenly lg:justify-center items-center md:items-start gap-8  w-11/12 lg:w-3/4 grow 2xl:w-3/5 mb-8  ">
           {Array.isArray(itemsState) &&
             itemsState.map((item, index) => (
               <div
