@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Similarmain({ items, width, flexDirection }) {
+export default function Similarmain({ items, flexDirection }) {
   let directionClass;
   if (flexDirection === 'row-reverse') {
     directionClass = "mainsection:flex-row-reverse";
@@ -14,9 +14,9 @@ export default function Similarmain({ items, width, flexDirection }) {
     <div>
       {items.map((item, index) => (
         <div key={index} className={`flex flex-col-reverse h-auto justify-around w-full items-center ${directionClass}`}>
-          <div className="main1 mt-6 mainsection:ml-6 smd:mt-8 mainsection:center w-full">
+          <div className="main1 my-6 mainsection:ml-6 smd:mt-8 mainsection:center w-full ">
 
-            <div className="texts flex flex-col justify-center items-center mainsection:justify-start lg:h-[40vh] lg:justify-around ">
+            <div className=" texts flex flex-col justify-center items-center mainsection:justify-start lg:h-auto lg:justify-around ">
               <div className="justify-center items-center flex mainsection:justify-start w-full lg:text-start lg:w-9/12  ">
                 <img className="w-20 h-20 " src={item.img3} alt="" />
               </div>
@@ -27,17 +27,17 @@ export default function Similarmain({ items, width, flexDirection }) {
               <span className="titledes text-[19px] font-normal text-center w-11/12 lg:text-start lg:w-9/12   ">
                 {item.textDes}
               </span>
-            </div>
-            <div className="my-4 container">
+            <div className="my-4 flex justify-center items-center w-11/12 lg:text-start lg:w-9/12 ">
               <button className="h-10 w-48 lg:h-16 lg:w-52 rounded-sm bg-primary text-white capitalize lg:text-lg">{item.btnText}</button>
             </div>
-          </div>
-          <div className=" ml-10 m-auto mainsection:m-0 main2 flex justify-center items-center  w-full   h-[60vh] sm:h-3/5  mainsection:w-f[40vw] container   ">
-            <div className="relative  container">
-              <img className="w-full h-full " src={item.img1} alt="" />
             </div>
-            <div className="relative container -left-[83px] right-0 top-[44px] sm:-left-[171px] sm:top-0 bottom-0 sm:h-3/5 mainsection:top-[36px] mainsection:-left-[73px] xl:top-[14px] xl:-left-[155px] ">
-              <img className="w-full h-[100%] " src={item.img2} alt="" />
+          </div>
+          <div className=" ml-10 m-auto mainsection:m-0 main2 flex justify-center items-center  w-full   h-auto sm:h-3/5  mainsection:w-f[40vw] mycontainer    ">
+            <div className="relative  container w-full h-auto">
+              <img className="specialimg " src={item.img1} alt="" />
+            </div>
+            <div className="relative container -left-[46px] right-0 top-[44px] sm:-left-[89px] sm:top-8I bottom-0 sm:h-3/5 mainsection:top-[36px] mainsection:-left-[73px] xl:top-[14px] xl:-left-[155px] h-auto ">
+              <img className="specialimg " src={item.img2} alt="" />
             </div>
           </div>
         </div>

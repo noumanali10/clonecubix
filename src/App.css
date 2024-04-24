@@ -85,4 +85,17 @@
   @apply flex justify-center items-center;
   @apply mainsection:justify-start mainsection:items-start;
 }
+.mycontainer{
+  @apply flex justify-center items-center
+}
+.fa-angle-down{
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust distance as needed */
+  }}
 

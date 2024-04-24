@@ -1,0 +1,14 @@
+body{
+    @apply list-none;
+}
+.techli{
+    @apply font-semibold text-base leading-6 text-[#424242]  ;
+    @apply py-4;
+    border-bottom: 2px solid gray;
+}
+.active{
+  color: #5174fd;
+ 
+  border-bottom: 2px solid #5174fd;
+    
+}

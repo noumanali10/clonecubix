@@ -3,4 +3,17 @@
 @tailwind utilities;
 
 @tailwind base;
-
+@layer base {
+    .specialimg {
+     
+      max-width: 150% !important;
+      @apply xsm:max-w-[135%] !important ;
+      @apply sm:max-w-[100%] !important ;
+      
+    }
+  }
+  @layer base{
+.btn{
+  @apply bg-primary;
+}
+  }

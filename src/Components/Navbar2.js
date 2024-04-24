@@ -3,6 +3,7 @@ import ServicesDropDown from "./ServicesDropDown";
 import SolutionsDropDown from "./solutionsDropDown";
 import AboutDropDown from "./aboutDropDown";
 import ResourcesDropDown from "./resourcesDropDown";
+import { Link } from "react-router-dom";
 
 export default function Navbar2({ isSticky }) {
 
@@ -91,7 +92,7 @@ useEffect(()=>{
                   onMouseEnter={() => updateHoverState("services", true)}
                   onMouseLeave={() => updateHoverState("services", false)}
                 >
-                  Services
+                  <Link to="/Services">Services</Link>
                   {hoverState.services && <ServicesDropDown />}
                 </li>
                 <li
@@ -122,7 +123,7 @@ useEffect(()=>{
                   Resources
                   {hoverState.resources && <ResourcesDropDown />}
                 </li>
-                <li style={{ color: textColor }}>Contact</li>
+                <li style={{ color: textColor }}> <Link to="/contactus">Contact</Link> </li>
                 <li
                   style={{ color: textColor }}
                   onClick={() => {

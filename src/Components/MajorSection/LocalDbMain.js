@@ -24,8 +24,8 @@ const localDbMain = [
     ],
     section3: [
       {
-        img1: "https://www.cubix.co/themes/responsiv-clean/assets/images/home/home-webp/hictic-mobile-1-opt.webp",
-        img2: "https://www.cubix.co/themes/responsiv-clean/assets/images/home/home-webp/hictic-mobile-2-opt.webp",
+        img2: "https://www.cubix.co/themes/responsiv-clean/assets/images/home/home-webp/hictic-mobile-1-opt.webp",
+        img1: "https://www.cubix.co/themes/responsiv-clean/assets/images/home/home-webp/hictic-mobile-2-opt.webp",
         img3: "https://www.cubix.co/themes/responsiv-clean/assets/images/home/hictic-logo-icn.png",
         textMain: "Hictic - revolutionizing traditional advertising & digital marketing",
         textDes: "Launch new adverts and engage with your customers - an all-in-one platform that promotes your brand and builds engagement.",
